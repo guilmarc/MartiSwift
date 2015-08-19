@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B59D9C631B84760600793BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C621B84760600793BEF /* AppDelegate.swift */; };
+		B59D9C681B84760600793BEF /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C671B84760600793BEF /* BrowserViewController.swift */; };
+		B59D9C6B1B84760600793BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59D9C691B84760600793BEF /* Main.storyboard */; };
+		B59D9C6D1B84760600793BEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59D9C6C1B84760600793BEF /* Images.xcassets */; };
+		B59D9C701B84760600793BEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59D9C6E1B84760600793BEF /* LaunchScreen.xib */; };
+		B59D9C7C1B84760700793BEF /* martiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C7B1B84760700793BEF /* martiTests.swift */; };
+		B59D9CB61B847BBA00793BEF /* ILartTSK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C8A1B847BBA00793BEF /* ILartTSK.xcdatamodeld */; };
+		B59D9CB71B847BBA00793BEF /* ILgroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C8C1B847BBA00793BEF /* ILgroup.m */; };
+		B59D9CB81B847BBA00793BEF /* ILstep.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C8E1B847BBA00793BEF /* ILstep.m */; };
+		B59D9CB91B847BBB00793BEF /* ILstepAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C901B847BBA00793BEF /* ILstepAudio.m */; };
+		B59D9CBA1B847BBB00793BEF /* ILstepAudioShort.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C921B847BBA00793BEF /* ILstepAudioShort.m */; };
+		B59D9CBB1B847BBB00793BEF /* ILstepImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C941B847BBA00793BEF /* ILstepImage.m */; };
+		B59D9CBC1B847BBB00793BEF /* ILstepThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C961B847BBA00793BEF /* ILstepThumbnail.m */; };
+		B59D9CBD1B847BBB00793BEF /* ILstepVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C981B847BBA00793BEF /* ILstepVideo.m */; };
+		B59D9CBE1B847BBB00793BEF /* ILtask.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C9A1B847BBA00793BEF /* ILtask.m */; };
+		B59D9CBF1B847BBB00793BEF /* ILtaskAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C9C1B847BBA00793BEF /* ILtaskAudio.m */; };
+		B59D9CC01B847BBB00793BEF /* ILtaskAudioShort.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C9E1B847BBA00793BEF /* ILtaskAudioShort.m */; };
+		B59D9CC11B847BBB00793BEF /* ILtaskImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CA01B847BBA00793BEF /* ILtaskImage.m */; };
+		B59D9CC21B847BBB00793BEF /* ILtasksList.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CA21B847BBA00793BEF /* ILtasksList.m */; };
+		B59D9CC31B847BBB00793BEF /* ILtasksListAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CA41B847BBA00793BEF /* ILtasksListAudio.m */; };
+		B59D9CC41B847BBB00793BEF /* ILtasksListThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CA61B847BBA00793BEF /* ILtasksListThumbnail.m */; };
+		B59D9CC51B847BBB00793BEF /* ILtaskThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CA81B847BBA00793BEF /* ILtaskThumbnail.m */; };
+		B59D9CC61B847BBB00793BEF /* marti.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CA91B847BBA00793BEF /* marti.xcdatamodeld */; };
+		B59D9CC71B847BBB00793BEF /* marti1To2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CAC1B847BBA00793BEF /* marti1To2.xcmappingmodel */; };
+		B59D9CC81B847BBB00793BEF /* IlCoreDataStackContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CAF1B847BBA00793BEF /* IlCoreDataStackContext.m */; };
+		B59D9CC91B847BBB00793BEF /* MartiStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CB11B847BBA00793BEF /* MartiStoreManager.m */; };
+		B59D9CCA1B847BBB00793BEF /* VintageDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CB31B847BBA00793BEF /* VintageDataImporter.m */; };
+		B59D9CCB1B847BBB00793BEF /* VintageMartiCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CB51B847BBA00793BEF /* VintageMartiCDManager.m */; };
+		B59D9CCF1B847C8F00793BEF /* martiPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CCD1B847C8F00793BEF /* martiPro.xcdatamodeld */; };
+		B59D9CD11B847CD500793BEF /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CD01B847CD500793BEF /* Step.swift */; };
+		B59D9CD31B847CD600793BEF /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CD21B847CD600793BEF /* Context.swift */; };
+		B59D9CD51B847CD600793BEF /* StaticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CD41B847CD600793BEF /* StaticEvent.swift */; };
+		B59D9CD71B847CD700793BEF /* DailyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CD61B847CD700793BEF /* DailyRecurrence.swift */; };
+		B59D9CD91B847CD700793BEF /* SelectionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CD81B847CD700793BEF /* SelectionStep.swift */; };
+		B59D9CDB1B847CD700793BEF /* EventRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CDA1B847CD700793BEF /* EventRoutine.swift */; };
+		B59D9CDD1B847CD800793BEF /* Schedulable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CDC1B847CD800793BEF /* Schedulable.swift */; };
+		B59D9CDF1B847CD800793BEF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CDE1B847CD800793BEF /* Media.swift */; };
+		B59D9CE11B847CD800793BEF /* RecursiveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CE01B847CD800793BEF /* RecursiveEvent.swift */; };
+		B59D9CE31B847CD800793BEF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CE21B847CD800793BEF /* Event.swift */; };
+		B59D9CE51B847CD800793BEF /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CE41B847CD800793BEF /* Calendar.swift */; };
+		B59D9CE71B847CD900793BEF /* MediaStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CE61B847CD900793BEF /* MediaStep.swift */; };
+		B59D9CE91B847CD900793BEF /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CE81B847CD900793BEF /* EventTask.swift */; };
+		B59D9CEB1B847CD900793BEF /* RoutingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CEA1B847CD900793BEF /* RoutingStep.swift */; };
+		B59D9CED1B847CD900793BEF /* WeeklyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CEC1B847CD900793BEF /* WeeklyRecurrence.swift */; };
+		B59D9CEF1B847CD900793BEF /* EventRoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CEE1B847CD900793BEF /* EventRoutineTask.swift */; };
+		B59D9CF11B847CDA00793BEF /* MonthlyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CF01B847CDA00793BEF /* MonthlyRecurrence.swift */; };
+		B59D9CF31B847CDA00793BEF /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CF21B847CDA00793BEF /* Routine.swift */; };
+		B59D9CF51B847CDA00793BEF /* ScheduledEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CF41B847CDA00793BEF /* ScheduledEvent.swift */; };
+		B59D9CF71B847CDA00793BEF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CF61B847CDA00793BEF /* Task.swift */; };
+		B59D9CF91B847CDA00793BEF /* RoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CF81B847CDA00793BEF /* RoutineTask.swift */; };
+		B59D9CFB1B847CDA00793BEF /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CFA1B847CDA00793BEF /* Schedule.swift */; };
+		B59D9CFD1B847CDB00793BEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CFC1B847CDB00793BEF /* User.swift */; };
+		B59D9CFF1B847E5300793BEF /* User+Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CFE1B847E5300793BEF /* User+Human.swift */; };
+		B59D9D041B84848600793BEF /* NewMartiCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B59D9D031B84848600793BEF /* NewMartiCDManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B59D9C761B84760700793BEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B59D9C551B84760600793BEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B59D9C5C1B84760600793BEF;
+			remoteInfo = marti;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B59D9C5D1B84760600793BEF /* marti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59D9C611B84760600793BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59D9C621B84760600793BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B59D9C671B84760600793BEF /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		B59D9C6A1B84760600793BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B59D9C6C1B84760600793BEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B59D9C6F1B84760600793BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B59D9C751B84760700793BEF /* martiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = martiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59D9C7A1B84760700793BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59D9C7B1B84760700793BEF /* martiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = martiTests.swift; sourceTree = "<group>"; };
+		B59D9C8B1B847BBA00793BEF /* ILgroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILgroup.h; sourceTree = "<group>"; };
+		B59D9C8C1B847BBA00793BEF /* ILgroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILgroup.m; sourceTree = "<group>"; };
+		B59D9C8D1B847BBA00793BEF /* ILstep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILstep.h; sourceTree = "<group>"; };
+		B59D9C8E1B847BBA00793BEF /* ILstep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILstep.m; sourceTree = "<group>"; };
+		B59D9C8F1B847BBA00793BEF /* ILstepAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILstepAudio.h; sourceTree = "<group>"; };
+		B59D9C901B847BBA00793BEF /* ILstepAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILstepAudio.m; sourceTree = "<group>"; };
+		B59D9C911B847BBA00793BEF /* ILstepAudioShort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILstepAudioShort.h; sourceTree = "<group>"; };
+		B59D9C921B847BBA00793BEF /* ILstepAudioShort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILstepAudioShort.m; sourceTree = "<group>"; };
+		B59D9C931B847BBA00793BEF /* ILstepImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILstepImage.h; sourceTree = "<group>"; };
+		B59D9C941B847BBA00793BEF /* ILstepImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILstepImage.m; sourceTree = "<group>"; };
+		B59D9C951B847BBA00793BEF /* ILstepThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILstepThumbnail.h; sourceTree = "<group>"; };
+		B59D9C961B847BBA00793BEF /* ILstepThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILstepThumbnail.m; sourceTree = "<group>"; };
+		B59D9C971B847BBA00793BEF /* ILstepVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILstepVideo.h; sourceTree = "<group>"; };
+		B59D9C981B847BBA00793BEF /* ILstepVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILstepVideo.m; sourceTree = "<group>"; };
+		B59D9C991B847BBA00793BEF /* ILtask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtask.h; sourceTree = "<group>"; };
+		B59D9C9A1B847BBA00793BEF /* ILtask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtask.m; sourceTree = "<group>"; };
+		B59D9C9B1B847BBA00793BEF /* ILtaskAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtaskAudio.h; sourceTree = "<group>"; };
+		B59D9C9C1B847BBA00793BEF /* ILtaskAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtaskAudio.m; sourceTree = "<group>"; };
+		B59D9C9D1B847BBA00793BEF /* ILtaskAudioShort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtaskAudioShort.h; sourceTree = "<group>"; };
+		B59D9C9E1B847BBA00793BEF /* ILtaskAudioShort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtaskAudioShort.m; sourceTree = "<group>"; };
+		B59D9C9F1B847BBA00793BEF /* ILtaskImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtaskImage.h; sourceTree = "<group>"; };
+		B59D9CA01B847BBA00793BEF /* ILtaskImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtaskImage.m; sourceTree = "<group>"; };
+		B59D9CA11B847BBA00793BEF /* ILtasksList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtasksList.h; sourceTree = "<group>"; };
+		B59D9CA21B847BBA00793BEF /* ILtasksList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtasksList.m; sourceTree = "<group>"; };
+		B59D9CA31B847BBA00793BEF /* ILtasksListAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtasksListAudio.h; sourceTree = "<group>"; };
+		B59D9CA41B847BBA00793BEF /* ILtasksListAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtasksListAudio.m; sourceTree = "<group>"; };
+		B59D9CA51B847BBA00793BEF /* ILtasksListThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtasksListThumbnail.h; sourceTree = "<group>"; };
+		B59D9CA61B847BBA00793BEF /* ILtasksListThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtasksListThumbnail.m; sourceTree = "<group>"; };
+		B59D9CA71B847BBA00793BEF /* ILtaskThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILtaskThumbnail.h; sourceTree = "<group>"; };
+		B59D9CA81B847BBA00793BEF /* ILtaskThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILtaskThumbnail.m; sourceTree = "<group>"; };
+		B59D9CAA1B847BBA00793BEF /* marti.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marti.xcdatamodel; sourceTree = "<group>"; };
+		B59D9CAB1B847BBA00793BEF /* marti2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marti2.xcdatamodel; sourceTree = "<group>"; };
+		B59D9CAC1B847BBA00793BEF /* marti1To2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = marti1To2.xcmappingmodel; sourceTree = "<group>"; };
+		B59D9CAE1B847BBA00793BEF /* IlCoreDataStackContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IlCoreDataStackContext.h; sourceTree = "<group>"; };
+		B59D9CAF1B847BBA00793BEF /* IlCoreDataStackContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IlCoreDataStackContext.m; sourceTree = "<group>"; };
+		B59D9CB01B847BBA00793BEF /* MartiStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MartiStoreManager.h; sourceTree = "<group>"; };
+		B59D9CB11B847BBA00793BEF /* MartiStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MartiStoreManager.m; sourceTree = "<group>"; };
+		B59D9CB21B847BBA00793BEF /* VintageDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VintageDataImporter.h; sourceTree = "<group>"; };
+		B59D9CB31B847BBA00793BEF /* VintageDataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VintageDataImporter.m; sourceTree = "<group>"; };
+		B59D9CB41B847BBA00793BEF /* VintageMartiCDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VintageMartiCDManager.h; sourceTree = "<group>"; };
+		B59D9CB51B847BBA00793BEF /* VintageMartiCDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VintageMartiCDManager.m; sourceTree = "<group>"; };
+		B59D9CCE1B847C8F00793BEF /* martiPro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = martiPro.xcdatamodel; sourceTree = "<group>"; };
+		B59D9CD01B847CD500793BEF /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		B59D9CD21B847CD600793BEF /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		B59D9CD41B847CD600793BEF /* StaticEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEvent.swift; sourceTree = "<group>"; };
+		B59D9CD61B847CD700793BEF /* DailyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRecurrence.swift; sourceTree = "<group>"; };
+		B59D9CD81B847CD700793BEF /* SelectionStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionStep.swift; sourceTree = "<group>"; };
+		B59D9CDA1B847CD700793BEF /* EventRoutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRoutine.swift; sourceTree = "<group>"; };
+		B59D9CDC1B847CD800793BEF /* Schedulable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedulable.swift; sourceTree = "<group>"; };
+		B59D9CDE1B847CD800793BEF /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		B59D9CE01B847CD800793BEF /* RecursiveEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveEvent.swift; sourceTree = "<group>"; };
+		B59D9CE21B847CD800793BEF /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B59D9CE41B847CD800793BEF /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		B59D9CE61B847CD900793BEF /* MediaStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStep.swift; sourceTree = "<group>"; };
+		B59D9CE81B847CD900793BEF /* EventTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
+		B59D9CEA1B847CD900793BEF /* RoutingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingStep.swift; sourceTree = "<group>"; };
+		B59D9CEC1B847CD900793BEF /* WeeklyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRecurrence.swift; sourceTree = "<group>"; };
+		B59D9CEE1B847CD900793BEF /* EventRoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRoutineTask.swift; sourceTree = "<group>"; };
+		B59D9CF01B847CDA00793BEF /* MonthlyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRecurrence.swift; sourceTree = "<group>"; };
+		B59D9CF21B847CDA00793BEF /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		B59D9CF41B847CDA00793BEF /* ScheduledEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledEvent.swift; sourceTree = "<group>"; };
+		B59D9CF61B847CDA00793BEF /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B59D9CF81B847CDA00793BEF /* RoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTask.swift; sourceTree = "<group>"; };
+		B59D9CFA1B847CDA00793BEF /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		B59D9CFC1B847CDB00793BEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B59D9CFE1B847E5300793BEF /* User+Human.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+Human.swift"; path = "Model/User+Human.swift"; sourceTree = "<group>"; };
+		B59D9D001B847FE700793BEF /* default.marti */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.marti; sourceTree = "<group>"; };
+		B59D9D011B84832900793BEF /* marti-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "marti-Bridging-Header.h"; path = "Model/VintageModel/marti-Bridging-Header.h"; sourceTree = "<group>"; };
+		B59D9D021B84848600793BEF /* NewMartiCDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMartiCDManager.h; sourceTree = "<group>"; };
+		B59D9D031B84848600793BEF /* NewMartiCDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMartiCDManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B59D9C5A1B84760600793BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59D9C721B84760700793BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B59D9C541B84760600793BEF = {
+			isa = PBXGroup;
+			children = (
+				B59D9C5F1B84760600793BEF /* marti */,
+				B59D9C781B84760700793BEF /* martiTests */,
+				B59D9C5E1B84760600793BEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B59D9C5E1B84760600793BEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9C5D1B84760600793BEF /* marti.app */,
+				B59D9C751B84760700793BEF /* martiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B59D9C5F1B84760600793BEF /* marti */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9C621B84760600793BEF /* AppDelegate.swift */,
+				B59D9C671B84760600793BEF /* BrowserViewController.swift */,
+				B59D9C691B84760600793BEF /* Main.storyboard */,
+				B59D9C6C1B84760600793BEF /* Images.xcassets */,
+				B59D9C6E1B84760600793BEF /* LaunchScreen.xib */,
+				B59D9C851B84791600793BEF /* Model */,
+				B59D9C601B84760600793BEF /* Supporting Files */,
+			);
+			path = marti;
+			sourceTree = "<group>";
+		};
+		B59D9C601B84760600793BEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9C611B84760600793BEF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B59D9C781B84760700793BEF /* martiTests */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9C7B1B84760700793BEF /* martiTests.swift */,
+				B59D9C791B84760700793BEF /* Supporting Files */,
+			);
+			path = martiTests;
+			sourceTree = "<group>";
+		};
+		B59D9C791B84760700793BEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9C7A1B84760700793BEF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B59D9C851B84791600793BEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9CCD1B847C8F00793BEF /* martiPro.xcdatamodeld */,
+				B59D9CFE1B847E5300793BEF /* User+Human.swift */,
+				B59D9CCC1B847BD900793BEF /* GeneratedManagedObjects */,
+				B59D9C891B847BBA00793BEF /* VintageModel */,
+				B59D9D011B84832900793BEF /* marti-Bridging-Header.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B59D9C891B847BBA00793BEF /* VintageModel */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9D021B84848600793BEF /* NewMartiCDManager.h */,
+				B59D9D031B84848600793BEF /* NewMartiCDManager.m */,
+				B59D9D001B847FE700793BEF /* default.marti */,
+				B59D9CA91B847BBA00793BEF /* marti.xcdatamodeld */,
+				B59D9C8A1B847BBA00793BEF /* ILartTSK.xcdatamodeld */,
+				B59D9CAC1B847BBA00793BEF /* marti1To2.xcmappingmodel */,
+				B59D9C8B1B847BBA00793BEF /* ILgroup.h */,
+				B59D9C8C1B847BBA00793BEF /* ILgroup.m */,
+				B59D9C8D1B847BBA00793BEF /* ILstep.h */,
+				B59D9C8E1B847BBA00793BEF /* ILstep.m */,
+				B59D9C8F1B847BBA00793BEF /* ILstepAudio.h */,
+				B59D9C901B847BBA00793BEF /* ILstepAudio.m */,
+				B59D9C911B847BBA00793BEF /* ILstepAudioShort.h */,
+				B59D9C921B847BBA00793BEF /* ILstepAudioShort.m */,
+				B59D9C931B847BBA00793BEF /* ILstepImage.h */,
+				B59D9C941B847BBA00793BEF /* ILstepImage.m */,
+				B59D9C951B847BBA00793BEF /* ILstepThumbnail.h */,
+				B59D9C961B847BBA00793BEF /* ILstepThumbnail.m */,
+				B59D9C971B847BBA00793BEF /* ILstepVideo.h */,
+				B59D9C981B847BBA00793BEF /* ILstepVideo.m */,
+				B59D9C991B847BBA00793BEF /* ILtask.h */,
+				B59D9C9A1B847BBA00793BEF /* ILtask.m */,
+				B59D9C9B1B847BBA00793BEF /* ILtaskAudio.h */,
+				B59D9C9C1B847BBA00793BEF /* ILtaskAudio.m */,
+				B59D9C9D1B847BBA00793BEF /* ILtaskAudioShort.h */,
+				B59D9C9E1B847BBA00793BEF /* ILtaskAudioShort.m */,
+				B59D9C9F1B847BBA00793BEF /* ILtaskImage.h */,
+				B59D9CA01B847BBA00793BEF /* ILtaskImage.m */,
+				B59D9CA11B847BBA00793BEF /* ILtasksList.h */,
+				B59D9CA21B847BBA00793BEF /* ILtasksList.m */,
+				B59D9CA31B847BBA00793BEF /* ILtasksListAudio.h */,
+				B59D9CA41B847BBA00793BEF /* ILtasksListAudio.m */,
+				B59D9CA51B847BBA00793BEF /* ILtasksListThumbnail.h */,
+				B59D9CA61B847BBA00793BEF /* ILtasksListThumbnail.m */,
+				B59D9CA71B847BBA00793BEF /* ILtaskThumbnail.h */,
+				B59D9CA81B847BBA00793BEF /* ILtaskThumbnail.m */,
+				B59D9CAD1B847BBA00793BEF /* MartiStoreHandler */,
+				B59D9CB21B847BBA00793BEF /* VintageDataImporter.h */,
+				B59D9CB31B847BBA00793BEF /* VintageDataImporter.m */,
+				B59D9CB41B847BBA00793BEF /* VintageMartiCDManager.h */,
+				B59D9CB51B847BBA00793BEF /* VintageMartiCDManager.m */,
+			);
+			name = VintageModel;
+			path = Model/VintageModel;
+			sourceTree = "<group>";
+		};
+		B59D9CAD1B847BBA00793BEF /* MartiStoreHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9CAE1B847BBA00793BEF /* IlCoreDataStackContext.h */,
+				B59D9CAF1B847BBA00793BEF /* IlCoreDataStackContext.m */,
+				B59D9CB01B847BBA00793BEF /* MartiStoreManager.h */,
+				B59D9CB11B847BBA00793BEF /* MartiStoreManager.m */,
+			);
+			path = MartiStoreHandler;
+			sourceTree = "<group>";
+		};
+		B59D9CCC1B847BD900793BEF /* GeneratedManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B59D9CFC1B847CDB00793BEF /* User.swift */,
+				B59D9CFA1B847CDA00793BEF /* Schedule.swift */,
+				B59D9CF81B847CDA00793BEF /* RoutineTask.swift */,
+				B59D9CF61B847CDA00793BEF /* Task.swift */,
+				B59D9CF41B847CDA00793BEF /* ScheduledEvent.swift */,
+				B59D9CF21B847CDA00793BEF /* Routine.swift */,
+				B59D9CF01B847CDA00793BEF /* MonthlyRecurrence.swift */,
+				B59D9CEE1B847CD900793BEF /* EventRoutineTask.swift */,
+				B59D9CEC1B847CD900793BEF /* WeeklyRecurrence.swift */,
+				B59D9CEA1B847CD900793BEF /* RoutingStep.swift */,
+				B59D9CE81B847CD900793BEF /* EventTask.swift */,
+				B59D9CE61B847CD900793BEF /* MediaStep.swift */,
+				B59D9CE41B847CD800793BEF /* Calendar.swift */,
+				B59D9CE21B847CD800793BEF /* Event.swift */,
+				B59D9CE01B847CD800793BEF /* RecursiveEvent.swift */,
+				B59D9CDE1B847CD800793BEF /* Media.swift */,
+				B59D9CDC1B847CD800793BEF /* Schedulable.swift */,
+				B59D9CDA1B847CD700793BEF /* EventRoutine.swift */,
+				B59D9CD81B847CD700793BEF /* SelectionStep.swift */,
+				B59D9CD61B847CD700793BEF /* DailyRecurrence.swift */,
+				B59D9CD41B847CD600793BEF /* StaticEvent.swift */,
+				B59D9CD21B847CD600793BEF /* Context.swift */,
+				B59D9CD01B847CD500793BEF /* Step.swift */,
+			);
+			name = GeneratedManagedObjects;
+			path = Model/GeneratedManagedObjects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B59D9C5C1B84760600793BEF /* marti */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59D9C7F1B84760700793BEF /* Build configuration list for PBXNativeTarget "marti" */;
+			buildPhases = (
+				B59D9C591B84760600793BEF /* Sources */,
+				B59D9C5A1B84760600793BEF /* Frameworks */,
+				B59D9C5B1B84760600793BEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = marti;
+			productName = marti;
+			productReference = B59D9C5D1B84760600793BEF /* marti.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B59D9C741B84760700793BEF /* martiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59D9C821B84760700793BEF /* Build configuration list for PBXNativeTarget "martiTests" */;
+			buildPhases = (
+				B59D9C711B84760700793BEF /* Sources */,
+				B59D9C721B84760700793BEF /* Frameworks */,
+				B59D9C731B84760700793BEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B59D9C771B84760700793BEF /* PBXTargetDependency */,
+			);
+			name = martiTests;
+			productName = martiTests;
+			productReference = B59D9C751B84760700793BEF /* martiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B59D9C551B84760600793BEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Infologique;
+				TargetAttributes = {
+					B59D9C5C1B84760600793BEF = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B59D9C741B84760700793BEF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B59D9C5C1B84760600793BEF;
+					};
+				};
+			};
+			buildConfigurationList = B59D9C581B84760600793BEF /* Build configuration list for PBXProject "marti" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B59D9C541B84760600793BEF;
+			productRefGroup = B59D9C5E1B84760600793BEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B59D9C5C1B84760600793BEF /* marti */,
+				B59D9C741B84760700793BEF /* martiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B59D9C5B1B84760600793BEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59D9C6B1B84760600793BEF /* Main.storyboard in Resources */,
+				B59D9C701B84760600793BEF /* LaunchScreen.xib in Resources */,
+				B59D9C6D1B84760600793BEF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59D9C731B84760700793BEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B59D9C591B84760600793BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59D9CC51B847BBB00793BEF /* ILtaskThumbnail.m in Sources */,
+				B59D9CCA1B847BBB00793BEF /* VintageDataImporter.m in Sources */,
+				B59D9CBD1B847BBB00793BEF /* ILstepVideo.m in Sources */,
+				B59D9CCB1B847BBB00793BEF /* VintageMartiCDManager.m in Sources */,
+				B59D9CB61B847BBA00793BEF /* ILartTSK.xcdatamodeld in Sources */,
+				B59D9CEF1B847CD900793BEF /* EventRoutineTask.swift in Sources */,
+				B59D9CEB1B847CD900793BEF /* RoutingStep.swift in Sources */,
+				B59D9CF71B847CDA00793BEF /* Task.swift in Sources */,
+				B59D9CC91B847BBB00793BEF /* MartiStoreManager.m in Sources */,
+				B59D9CF91B847CDA00793BEF /* RoutineTask.swift in Sources */,
+				B59D9C681B84760600793BEF /* BrowserViewController.swift in Sources */,
+				B59D9CDB1B847CD700793BEF /* EventRoutine.swift in Sources */,
+				B59D9CDD1B847CD800793BEF /* Schedulable.swift in Sources */,
+				B59D9CC11B847BBB00793BEF /* ILtaskImage.m in Sources */,
+				B59D9C631B84760600793BEF /* AppDelegate.swift in Sources */,
+				B59D9CE11B847CD800793BEF /* RecursiveEvent.swift in Sources */,
+				B59D9CDF1B847CD800793BEF /* Media.swift in Sources */,
+				B59D9CB91B847BBB00793BEF /* ILstepAudio.m in Sources */,
+				B59D9CC71B847BBB00793BEF /* marti1To2.xcmappingmodel in Sources */,
+				B59D9CD71B847CD700793BEF /* DailyRecurrence.swift in Sources */,
+				B59D9CFD1B847CDB00793BEF /* User.swift in Sources */,
+				B59D9D041B84848600793BEF /* NewMartiCDManager.m in Sources */,
+				B59D9CD11B847CD500793BEF /* Step.swift in Sources */,
+				B59D9CC01B847BBB00793BEF /* ILtaskAudioShort.m in Sources */,
+				B59D9CBB1B847BBB00793BEF /* ILstepImage.m in Sources */,
+				B59D9CE51B847CD800793BEF /* Calendar.swift in Sources */,
+				B59D9CE31B847CD800793BEF /* Event.swift in Sources */,
+				B59D9CF31B847CDA00793BEF /* Routine.swift in Sources */,
+				B59D9CC31B847BBB00793BEF /* ILtasksListAudio.m in Sources */,
+				B59D9CD31B847CD600793BEF /* Context.swift in Sources */,
+				B59D9CFB1B847CDA00793BEF /* Schedule.swift in Sources */,
+				B59D9CED1B847CD900793BEF /* WeeklyRecurrence.swift in Sources */,
+				B59D9CC61B847BBB00793BEF /* marti.xcdatamodeld in Sources */,
+				B59D9CD91B847CD700793BEF /* SelectionStep.swift in Sources */,
+				B59D9CE91B847CD900793BEF /* EventTask.swift in Sources */,
+				B59D9CCF1B847C8F00793BEF /* martiPro.xcdatamodeld in Sources */,
+				B59D9CBC1B847BBB00793BEF /* ILstepThumbnail.m in Sources */,
+				B59D9CB81B847BBA00793BEF /* ILstep.m in Sources */,
+				B59D9CBF1B847BBB00793BEF /* ILtaskAudio.m in Sources */,
+				B59D9CBA1B847BBB00793BEF /* ILstepAudioShort.m in Sources */,
+				B59D9CE71B847CD900793BEF /* MediaStep.swift in Sources */,
+				B59D9CFF1B847E5300793BEF /* User+Human.swift in Sources */,
+				B59D9CC41B847BBB00793BEF /* ILtasksListThumbnail.m in Sources */,
+				B59D9CBE1B847BBB00793BEF /* ILtask.m in Sources */,
+				B59D9CF51B847CDA00793BEF /* ScheduledEvent.swift in Sources */,
+				B59D9CB71B847BBA00793BEF /* ILgroup.m in Sources */,
+				B59D9CC81B847BBB00793BEF /* IlCoreDataStackContext.m in Sources */,
+				B59D9CF11B847CDA00793BEF /* MonthlyRecurrence.swift in Sources */,
+				B59D9CD51B847CD600793BEF /* StaticEvent.swift in Sources */,
+				B59D9CC21B847BBB00793BEF /* ILtasksList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59D9C711B84760700793BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59D9C7C1B84760700793BEF /* martiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B59D9C771B84760700793BEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B59D9C5C1B84760600793BEF /* marti */;
+			targetProxy = B59D9C761B84760700793BEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B59D9C691B84760600793BEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59D9C6A1B84760600793BEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B59D9C6E1B84760600793BEF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59D9C6F1B84760600793BEF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B59D9C7D1B84760700793BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B59D9C7E1B84760700793BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B59D9C801B84760700793BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = marti/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B59D9C811B84760700793BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = marti/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B59D9C831B84760700793BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = martiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/marti.app/marti";
+			};
+			name = Debug;
+		};
+		B59D9C841B84760700793BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = martiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/marti.app/marti";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B59D9C581B84760600793BEF /* Build configuration list for PBXProject "marti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59D9C7D1B84760700793BEF /* Debug */,
+				B59D9C7E1B84760700793BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59D9C7F1B84760700793BEF /* Build configuration list for PBXNativeTarget "marti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59D9C801B84760700793BEF /* Debug */,
+				B59D9C811B84760700793BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B59D9C821B84760700793BEF /* Build configuration list for PBXNativeTarget "martiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59D9C831B84760700793BEF /* Debug */,
+				B59D9C841B84760700793BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B59D9C8A1B847BBA00793BEF /* ILartTSK.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+			);
+			path = ILartTSK.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B59D9CA91B847BBA00793BEF /* marti.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B59D9CAA1B847BBA00793BEF /* marti.xcdatamodel */,
+				B59D9CAB1B847BBA00793BEF /* marti2.xcdatamodel */,
+			);
+			currentVersion = B59D9CAB1B847BBA00793BEF /* marti2.xcdatamodel */;
+			path = marti.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B59D9CCD1B847C8F00793BEF /* martiPro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B59D9CCE1B847C8F00793BEF /* martiPro.xcdatamodel */,
+			);
+			currentVersion = B59D9CCE1B847C8F00793BEF /* martiPro.xcdatamodel */;
+			name = martiPro.xcdatamodeld;
+			path = Model/martiPro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B59D9C551B84760600793BEF /* Project object */;
+}
