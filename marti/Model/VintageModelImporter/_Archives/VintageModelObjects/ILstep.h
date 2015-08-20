@@ -53,12 +53,12 @@
 - (NSData *)getVideoData;
 - (void)setVideoData:(NSData *)videoData;
 - (void)deleteVideo;
-- (UIImage *)getFakeImage;
+//- (UIImage *)getFakeImage;
 - (NSData *)getImageData;
 - (void)setImageData:(NSData *)data;
 - (void)deleteImage;
-- (UIImage *)getSafelyChoiceThumbnailAtIndex:(NSUInteger)index;
-- (UIImage *)getFakeThumbnail;
+//- (UIImage *)getSafelyChoiceThumbnailAtIndex:(NSUInteger)index;
+//- (UIImage *)getFakeThumbnail;
 - (NSData *)getThumbnailData;
 - (void)setThumbnailData:(NSData *)data;
 - (void)deleteThumbnail;

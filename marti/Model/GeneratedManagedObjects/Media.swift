@@ -2,7 +2,7 @@
 //  Media.swift
 //  marti
 //
-//  Created by Marco Guilmette on 2015-08-19.
+//  Created by Marco Guilmette on 2015-08-20.
 //  Copyright (c) 2015 Infologique. All rights reserved.
 //
 
@@ -12,6 +12,6 @@ import CoreData
 class Media: NSManagedObject {
 
     @NSManaged var data: NSData
-    @NSManaged var type: Int16
+    @NSManaged var type: NSNumber
 
 }

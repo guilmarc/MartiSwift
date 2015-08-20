@@ -18,15 +18,6 @@
     User* _currentUser;
 }
 
-// static will be used for pre build content (if needed)
-//@property (readonly, strong, nonatomic) NSManagedObjectContext *staticDataManagedObjectContext;
-//@property (readonly, strong, nonatomic) NSManagedObjectModel *staticDataManagedObjectModel;
-//@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *staticDataPersistentStoreCoordinator;
-
-// dynamic
-//@property (readonly, strong, nonatomic) NSManagedObjectContext *dynamicDataManagedObjectContext;
-//@property (readonly, strong, nonatomic) NSManagedObjectModel *dynamicDataManagedObjectModel;
-//@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *dynamicDataPersistentStoreCoordinator;
 
 @end
 
@@ -38,10 +29,6 @@
     NSFetchedResultsController* _activeStepsFetchedResultsController;
 }
 
-
-//@synthesize staticDataManagedObjectContext = _staticDataManagedObjectContext;
-//@synthesize staticDataManagedObjectModel = _staticDataManagedObjectModel;
-//synthesize staticDataPersistentStoreCoordinator = _staticDataPersistentStoreCoordinator;
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;

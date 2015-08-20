@@ -43,11 +43,11 @@
 
 // BASIC ACCESSORS
 
-- (UIImage *)getFakeImage;
+//- (UIImage *)getFakeImage;
 - (NSData *)getImageData;
 - (void)setImageData:(NSData *)data;
 - (void)deleteImage;
-- (UIImage *)getFakeThumbnail;
+//- (UIImage *)getFakeThumbnail;
 - (NSData *)getThumbnailData;
 - (void)setThumbnailData:(NSData *)data;
 - (void)deleteThumbnail;

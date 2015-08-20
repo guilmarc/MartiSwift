@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ILgroup" representedClassName="ILgroup" syncable="YES">
+        <attribute name="group_accessRights" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_fakeIndex" attributeType="Integer 64" defaultValueString="-1" syncable="YES"/>
+        <attribute name="group_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="group_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_useState" attributeType="String" defaultValueString="active" syncable="YES"/>
+        <attribute name="group_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="tasksList" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="belongToGroup" inverseEntity="ILtasksList" syncable="YES"/>
+    </entity>
+    <entity name="ILstep" representedClassName="ILstep" syncable="YES">
+        <attribute name="step_contentStyle" attributeType="String" defaultValueString="ImageAndAudio" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="step_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="step_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="step_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="step_style" attributeType="String" defaultValueString="simpleStep" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="step_title" optional="YES" attributeType="String" maxValueString="30" syncable="YES"/>
+        <attribute name="step_useState" attributeType="String" defaultValueString="active" syncable="YES"/>
+        <attribute name="step_version" attributeType="Float" defaultValueString="1.02" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <relationship name="belongToTask" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtask" inverseName="steps" inverseEntity="ILtask" syncable="YES"/>
+        <relationship name="step_audio" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ILstepAudio" inverseName="belongToStep" inverseEntity="ILstepAudio" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="step_audioShort" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ILstepAudioShort" inverseName="belongToStep" inverseEntity="ILstepAudioShort" syncable="YES"/>
+        <relationship name="step_image" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILstepImage" inverseName="belongToStep" inverseEntity="ILstepImage" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="step_thumbnail" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILstepThumbnail" inverseName="belongToStep" inverseEntity="ILstepThumbnail" syncable="YES"/>
+        <relationship name="step_video" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILstepVideo" inverseName="belongToStep" inverseEntity="ILstepVideo" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="subStep" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILstep" inverseName="superStep" inverseEntity="ILstep" syncable="YES"/>
+        <relationship name="subTasks" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtasksList" inverseName="belongToStep" inverseEntity="ILtasksList" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="superStep" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="subStep" inverseEntity="ILstep" syncable="YES"/>
+    </entity>
+    <entity name="ILstepAudio" representedClassName="ILstepAudio" syncable="YES">
+        <attribute name="stepAudio_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="stepAudio_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stepAudio_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stepAudio_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_audio" inverseEntity="ILstep" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+    </entity>
+    <entity name="ILstepAudioShort" representedClassName="ILstepAudioShort" syncable="YES">
+        <attribute name="stepAudioShort_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="stepAudioShort_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stepAudioShort_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stepAudioShort_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_audioShort" inverseEntity="ILstep" syncable="YES"/>
+    </entity>
+    <entity name="ILstepImage" representedClassName="ILstepImage" syncable="YES">
+        <attribute name="stepImage_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="stepImage_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stepImage_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stepImage_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_image" inverseEntity="ILstep" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+    </entity>
+    <entity name="ILstepThumbnail" representedClassName="ILstepThumbnail" syncable="YES">
+        <attribute name="stepThumbnail_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="stepThumbnail_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stepThumbnail_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stepThumbnail_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_thumbnail" inverseEntity="ILstep" syncable="YES"/>
+    </entity>
+    <entity name="ILstepVideo" representedClassName="ILstepVideo" syncable="YES">
+        <attribute name="stepVideo_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="stepVideo_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stepVideo_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stepVideo_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_video" inverseEntity="ILstep" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+    </entity>
+    <entity name="ILtask" representedClassName="ILtask" syncable="YES">
+        <attribute name="task_accessRights" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_fakeIndex" attributeType="Integer 64" defaultValueString="-1" syncable="YES"/>
+        <attribute name="task_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="task_title" optional="YES" attributeType="String" maxValueString="30" syncable="YES"/>
+        <attribute name="task_useState" attributeType="String" defaultValueString="active" syncable="YES"/>
+        <attribute name="task_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTasksList" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="tasks" inverseEntity="ILtasksList" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="steps" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ILstep" inverseName="belongToTask" inverseEntity="ILstep" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="task_audio" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtaskAudio" inverseName="belongToTask" inverseEntity="ILtaskAudio" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="task_audioShort" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtaskAudioShort" inverseName="belongToTask" inverseEntity="ILtaskAudioShort" syncable="YES"/>
+        <relationship name="task_image" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ILtaskImage" inverseName="belongToTask" inverseEntity="ILtaskImage" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="task_thumbnail" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ILtaskThumbnail" inverseName="belongToTask" inverseEntity="ILtaskThumbnail" syncable="YES"/>
+    </entity>
+    <entity name="ILtaskAudio" representedClassName="ILtaskAudio" syncable="YES">
+        <attribute name="taskAudio_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="taskAudio_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskAudio_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskAudio_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTask" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtask" inverseName="task_audio" inverseEntity="ILtask" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+    </entity>
+    <entity name="ILtaskAudioShort" representedClassName="ILtaskAudioShort" syncable="YES">
+        <attribute name="taskAudioShort_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="taskAudioShort_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskAudioShort_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskAudioShort_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTask" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtask" inverseName="task_audioShort" inverseEntity="ILtask" syncable="YES"/>
+    </entity>
+    <entity name="ILtaskImage" representedClassName="ILtaskImage" syncable="YES">
+        <attribute name="taskImage_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="taskImage_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskImage_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskImage_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTask" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtask" inverseName="task_image" inverseEntity="ILtask" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+    </entity>
+    <entity name="ILtasksList" representedClassName="ILtasksList" syncable="YES">
+        <attribute name="tasksList_accessRights" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasksList_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasksList_groupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasksList_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tasksList_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasksList_type" attributeType="String" defaultValueString="sub" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </attribute>
+        <attribute name="tasksList_useState" attributeType="String" defaultValueString="active" syncable="YES"/>
+        <attribute name="tasksList_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILgroup" inverseName="tasksList" inverseEntity="ILgroup" syncable="YES"/>
+        <relationship name="belongToStep" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="subTasks" inverseEntity="ILstep" syncable="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ILtask" inverseName="belongToTasksList" inverseEntity="ILtask" syncable="YES" isSyncIdentityProperty="YES" preferredClientType="" preferredRecord="">
+            <userInfo/>
+        </relationship>
+        <relationship name="tasksList_audio" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtasksListAudio" inverseName="belongToTasksList" inverseEntity="ILtasksListAudio" syncable="YES"/>
+        <relationship name="tasksList_thumbnail" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtasksListThumbnail" inverseName="belongToTasksList" inverseEntity="ILtasksListThumbnail" syncable="YES"/>
+    </entity>
+    <entity name="ILtasksListAudio" representedClassName="ILtasksListAudio" syncable="YES">
+        <attribute name="tasksListAudio_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="tasksListAudio_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasksListAudio_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tasksListAudio_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTasksList" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="tasksList_audio" inverseEntity="ILtasksList" syncable="YES"/>
+    </entity>
+    <entity name="ILtasksListThumbnail" representedClassName="ILtasksListThumbnail" syncable="YES">
+        <attribute name="tasksListThumbnail_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="tasksListThumbnail_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasksListThumbnail_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tasksListThumbnail_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTasksList" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="tasksList_thumbnail" inverseEntity="ILtasksList" syncable="YES"/>
+    </entity>
+    <entity name="ILtaskThumbnail" representedClassName="ILtaskThumbnail" syncable="YES">
+        <attribute name="taskThumbnail_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="taskThumbnail_flags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskThumbnail_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskThumbnail_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
+        <relationship name="belongToTask" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtask" inverseName="task_thumbnail" inverseEntity="ILtask" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ILgroup" positionX="160" positionY="192" width="128" height="210"/>
+        <element name="ILstep" positionX="160" positionY="192" width="128" height="300"/>
+        <element name="ILstepAudio" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILstepAudioShort" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILstepImage" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILstepThumbnail" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILstepVideo" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILtask" positionX="160" positionY="192" width="128" height="270"/>
+        <element name="ILtaskAudio" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILtaskAudioShort" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ILtaskImage" positionX="178" positionY="-0" width="128" height="120"/>
+        <element name="ILtasksList" positionX="-72" positionY="270" width="128" height="240"/>
+        <element name="ILtasksListAudio" positionX="-306" positionY="234" width="128" height="120"/>
+        <element name="ILtasksListThumbnail" positionX="-0" positionY="18" width="128" height="120"/>
+        <element name="ILtaskThumbnail" positionX="-236" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C15F11EA-1E8D-41FE-8B6D-B4DC69DFC6EE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>12A7499F6CF7B38A43922FB7073AAF93FF699B14</key>
+		<string>https://github.com/guilmarc/MartiSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>marti.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>12A7499F6CF7B38A43922FB7073AAF93FF699B14</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/guilmarc/MartiSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>12A7499F6CF7B38A43922FB7073AAF93FF699B14</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>12A7499F6CF7B38A43922FB7073AAF93FF699B14</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MartiSwift</string>
+		</dict>
+	</array>
+</dict>
+</plist>

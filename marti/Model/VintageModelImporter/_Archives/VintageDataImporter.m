@@ -6,10 +6,12 @@
 //  Copyright (c) 2014 Infologique. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
+
 #import "VintageDataImporter.h"
 
 #import "VintageMartiCDManager.h"
-#import "MartiCDManager.h"
+#import "NewMartiCDManager.h"
 
 //Vintage Model
 #import "ILgroup.h"

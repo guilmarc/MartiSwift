@@ -2,7 +2,7 @@
 //  RecursiveEvent.swift
 //  marti
 //
-//  Created by Marco Guilmette on 2015-08-19.
+//  Created by Marco Guilmette on 2015-08-20.
 //  Copyright (c) 2015 Infologique. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import CoreData
 
 class RecursiveEvent: ScheduledEvent {
 
-    @NSManaged var endAfterOccurence: Int16
-    @NSManaged var startDate: NSTimeInterval
+    @NSManaged var endAfterOccurence: NSNumber
+    @NSManaged var startDate: NSDate
 
 }

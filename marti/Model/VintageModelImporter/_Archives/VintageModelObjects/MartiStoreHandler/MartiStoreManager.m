@@ -23,7 +23,7 @@
 //                                              //
 //////////////////////////////////////////////////
 
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 #import "ILstepImage.h"
 #import "ILstepAudio.h"
 #import "ILstepVideo.h"
@@ -34,7 +34,7 @@
 #import "ILtasksList.h"
 #import "ILgroup.h"
 #import "ILcoreDataStackContext.h"
-#import "UIAlertView+MKBlockAdditions.h"
+//#import "UIAlertView+MKBlockAdditions.h"
 
 #include <sys/xattr.h>
 
