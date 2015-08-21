@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 class ILtask: NSManagedObject {
 
     @NSManaged var task_accessRights: String

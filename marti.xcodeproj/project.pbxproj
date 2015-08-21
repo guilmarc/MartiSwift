@@ -7,30 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B511FB6F1B87A51F0003AEFC /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB581B87A51F0003AEFC /* Schedule.swift */; };
-		B511FB701B87A51F0003AEFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB591B87A51F0003AEFC /* User.swift */; };
-		B511FB711B87A51F0003AEFC /* DailyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB5A1B87A51F0003AEFC /* DailyRecurrence.swift */; };
-		B511FB721B87A51F0003AEFC /* RecursiveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB5B1B87A51F0003AEFC /* RecursiveEvent.swift */; };
-		B511FB731B87A51F0003AEFC /* WeeklyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB5C1B87A51F0003AEFC /* WeeklyRecurrence.swift */; };
-		B511FB741B87A51F0003AEFC /* ScheduledEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB5D1B87A51F0003AEFC /* ScheduledEvent.swift */; };
-		B511FB751B87A51F0003AEFC /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB5E1B87A51F0003AEFC /* EventTask.swift */; };
-		B511FB761B87A51F0003AEFC /* RoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB5F1B87A51F0003AEFC /* RoutineTask.swift */; };
-		B511FB771B87A51F0003AEFC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB601B87A51F0003AEFC /* Task.swift */; };
-		B511FB781B87A51F0003AEFC /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB611B87A51F0003AEFC /* Step.swift */; };
-		B511FB791B87A51F0003AEFC /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB621B87A51F0003AEFC /* Media.swift */; };
-		B511FB7A1B87A51F0003AEFC /* Schedulable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB631B87A51F0003AEFC /* Schedulable.swift */; };
-		B511FB7B1B87A51F0003AEFC /* MonthlyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB641B87A51F0003AEFC /* MonthlyRecurrence.swift */; };
-		B511FB7C1B87A51F0003AEFC /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB651B87A51F0003AEFC /* Context.swift */; };
-		B511FB7D1B87A51F0003AEFC /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB661B87A51F0003AEFC /* Routine.swift */; };
-		B511FB7E1B87A51F0003AEFC /* SelectionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB671B87A51F0003AEFC /* SelectionStep.swift */; };
-		B511FB7F1B87A51F0003AEFC /* EventRoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB681B87A51F0003AEFC /* EventRoutineTask.swift */; };
-		B511FB801B87A51F0003AEFC /* EventRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB691B87A51F0003AEFC /* EventRoutine.swift */; };
-		B511FB811B87A51F0003AEFC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB6A1B87A51F0003AEFC /* Event.swift */; };
-		B511FB821B87A51F0003AEFC /* StaticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB6B1B87A51F0003AEFC /* StaticEvent.swift */; };
-		B511FB831B87A51F0003AEFC /* MediaStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB6C1B87A51F0003AEFC /* MediaStep.swift */; };
-		B511FB841B87A51F0003AEFC /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB6D1B87A51F0003AEFC /* Calendar.swift */; };
-		B511FB851B87A51F0003AEFC /* RoutingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511FB6E1B87A51F0003AEFC /* RoutingStep.swift */; };
-		B511FB8A1B87B59C0003AEFC /* user.marti in Resources */ = {isa = PBXBuildFile; fileRef = B511FB881B87A9C40003AEFC /* user.marti */; };
+		B51261801B8651EC008B0A74 /* Schedulable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512617F1B8651EC008B0A74 /* Schedulable.swift */; };
+		B51261821B8651ED008B0A74 /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261811B8651ED008B0A74 /* EventTask.swift */; };
+		B51261841B8651ED008B0A74 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261831B8651ED008B0A74 /* Media.swift */; };
+		B51261861B8651ED008B0A74 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261851B8651ED008B0A74 /* Calendar.swift */; };
+		B51261881B8651ED008B0A74 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261871B8651ED008B0A74 /* Step.swift */; };
+		B512618A1B8651ED008B0A74 /* SelectionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261891B8651ED008B0A74 /* SelectionStep.swift */; };
+		B512618C1B8651ED008B0A74 /* EventRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512618B1B8651ED008B0A74 /* EventRoutine.swift */; };
+		B512618E1B8651ED008B0A74 /* EventRoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512618D1B8651ED008B0A74 /* EventRoutineTask.swift */; };
+		B51261901B8651ED008B0A74 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512618F1B8651ED008B0A74 /* Routine.swift */; };
+		B51261921B8651ED008B0A74 /* RoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261911B8651ED008B0A74 /* RoutineTask.swift */; };
+		B51261941B8651ED008B0A74 /* ScheduledEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261931B8651ED008B0A74 /* ScheduledEvent.swift */; };
+		B51261961B8651EE008B0A74 /* MonthlyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261951B8651ED008B0A74 /* MonthlyRecurrence.swift */; };
+		B51261981B8651EE008B0A74 /* MediaStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261971B8651EE008B0A74 /* MediaStep.swift */; };
+		B512619A1B8651EE008B0A74 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261991B8651EE008B0A74 /* Task.swift */; };
+		B512619C1B8651EE008B0A74 /* RecursiveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512619B1B8651EE008B0A74 /* RecursiveEvent.swift */; };
+		B512619E1B8651EE008B0A74 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512619D1B8651EE008B0A74 /* Schedule.swift */; };
+		B51261A01B8651EE008B0A74 /* DailyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512619F1B8651EE008B0A74 /* DailyRecurrence.swift */; };
+		B51261A21B8651EE008B0A74 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261A11B8651EE008B0A74 /* Context.swift */; };
+		B51261A41B8651EE008B0A74 /* RoutingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261A31B8651EE008B0A74 /* RoutingStep.swift */; };
+		B51261A61B8651EE008B0A74 /* StaticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261A51B8651EE008B0A74 /* StaticEvent.swift */; };
+		B51261A81B8651EE008B0A74 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261A71B8651EE008B0A74 /* User.swift */; };
+		B51261AA1B8651EE008B0A74 /* WeeklyRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261A91B8651EE008B0A74 /* WeeklyRecurrence.swift */; };
+		B51261AC1B8651EE008B0A74 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261AB1B8651EE008B0A74 /* Event.swift */; };
 		B59D9C631B84760600793BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C621B84760600793BEF /* AppDelegate.swift */; };
 		B59D9C681B84760600793BEF /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9C671B84760600793BEF /* BrowserViewController.swift */; };
 		B59D9C6B1B84760600793BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59D9C691B84760600793BEF /* Main.storyboard */; };
@@ -41,6 +40,7 @@
 		B59D9CFF1B847E5300793BEF /* User+Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9CFE1B847E5300793BEF /* User+Human.swift */; };
 		B5DEBB681B8657E400D146EC /* marti.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB631B8657E400D146EC /* marti.xcdatamodeld */; };
 		B5DEBB691B8657E400D146EC /* marti1To2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB661B8657E400D146EC /* marti1To2.xcmappingmodel */; };
+		B5DEBB6A1B8657E400D146EC /* user.marti in Resources */ = {isa = PBXBuildFile; fileRef = B5DEBB671B8657E400D146EC /* user.marti */; };
 		B5DEBB7A1B86583000D146EC /* ILstepAudioShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB6B1B86583000D146EC /* ILstepAudioShort.swift */; };
 		B5DEBB7B1B86583000D146EC /* ILtasksListAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB6C1B86583000D146EC /* ILtasksListAudio.swift */; };
 		B5DEBB7C1B86583000D146EC /* ILtasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB6D1B86583000D146EC /* ILtasksList.swift */; };
@@ -72,30 +72,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B511FB581B87A51F0003AEFC /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		B511FB591B87A51F0003AEFC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B511FB5A1B87A51F0003AEFC /* DailyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRecurrence.swift; sourceTree = "<group>"; };
-		B511FB5B1B87A51F0003AEFC /* RecursiveEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveEvent.swift; sourceTree = "<group>"; };
-		B511FB5C1B87A51F0003AEFC /* WeeklyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRecurrence.swift; sourceTree = "<group>"; };
-		B511FB5D1B87A51F0003AEFC /* ScheduledEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledEvent.swift; sourceTree = "<group>"; };
-		B511FB5E1B87A51F0003AEFC /* EventTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
-		B511FB5F1B87A51F0003AEFC /* RoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTask.swift; sourceTree = "<group>"; };
-		B511FB601B87A51F0003AEFC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		B511FB611B87A51F0003AEFC /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		B511FB621B87A51F0003AEFC /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		B511FB631B87A51F0003AEFC /* Schedulable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedulable.swift; sourceTree = "<group>"; };
-		B511FB641B87A51F0003AEFC /* MonthlyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRecurrence.swift; sourceTree = "<group>"; };
-		B511FB651B87A51F0003AEFC /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
-		B511FB661B87A51F0003AEFC /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
-		B511FB671B87A51F0003AEFC /* SelectionStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionStep.swift; sourceTree = "<group>"; };
-		B511FB681B87A51F0003AEFC /* EventRoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRoutineTask.swift; sourceTree = "<group>"; };
-		B511FB691B87A51F0003AEFC /* EventRoutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRoutine.swift; sourceTree = "<group>"; };
-		B511FB6A1B87A51F0003AEFC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		B511FB6B1B87A51F0003AEFC /* StaticEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEvent.swift; sourceTree = "<group>"; };
-		B511FB6C1B87A51F0003AEFC /* MediaStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStep.swift; sourceTree = "<group>"; };
-		B511FB6D1B87A51F0003AEFC /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
-		B511FB6E1B87A51F0003AEFC /* RoutingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingStep.swift; sourceTree = "<group>"; };
-		B511FB881B87A9C40003AEFC /* user.marti */ = {isa = PBXFileReference; lastKnownFileType = file; name = user.marti; path = marti.xcodeproj/../marti/user.marti; sourceTree = "<group>"; };
+		B512617F1B8651EC008B0A74 /* Schedulable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedulable.swift; sourceTree = "<group>"; };
+		B51261811B8651ED008B0A74 /* EventTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
+		B51261831B8651ED008B0A74 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		B51261851B8651ED008B0A74 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		B51261871B8651ED008B0A74 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		B51261891B8651ED008B0A74 /* SelectionStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionStep.swift; sourceTree = "<group>"; };
+		B512618B1B8651ED008B0A74 /* EventRoutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRoutine.swift; sourceTree = "<group>"; };
+		B512618D1B8651ED008B0A74 /* EventRoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRoutineTask.swift; sourceTree = "<group>"; };
+		B512618F1B8651ED008B0A74 /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		B51261911B8651ED008B0A74 /* RoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTask.swift; sourceTree = "<group>"; };
+		B51261931B8651ED008B0A74 /* ScheduledEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledEvent.swift; sourceTree = "<group>"; };
+		B51261951B8651ED008B0A74 /* MonthlyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyRecurrence.swift; sourceTree = "<group>"; };
+		B51261971B8651EE008B0A74 /* MediaStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStep.swift; sourceTree = "<group>"; };
+		B51261991B8651EE008B0A74 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B512619B1B8651EE008B0A74 /* RecursiveEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveEvent.swift; sourceTree = "<group>"; };
+		B512619D1B8651EE008B0A74 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		B512619F1B8651EE008B0A74 /* DailyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRecurrence.swift; sourceTree = "<group>"; };
+		B51261A11B8651EE008B0A74 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		B51261A31B8651EE008B0A74 /* RoutingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingStep.swift; sourceTree = "<group>"; };
+		B51261A51B8651EE008B0A74 /* StaticEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEvent.swift; sourceTree = "<group>"; };
+		B51261A71B8651EE008B0A74 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B51261A91B8651EE008B0A74 /* WeeklyRecurrence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRecurrence.swift; sourceTree = "<group>"; };
+		B51261AB1B8651EE008B0A74 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B59D9C5D1B84760600793BEF /* marti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59D9C611B84760600793BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B59D9C621B84760600793BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		B5DEBB641B8657E400D146EC /* marti.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marti.xcdatamodel; sourceTree = "<group>"; };
 		B5DEBB651B8657E400D146EC /* marti2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marti2.xcdatamodel; sourceTree = "<group>"; };
 		B5DEBB661B8657E400D146EC /* marti1To2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; name = marti1To2.xcmappingmodel; path = marti/Model/VintageModelImporter/marti1To2.xcmappingmodel; sourceTree = SOURCE_ROOT; };
+		B5DEBB671B8657E400D146EC /* user.marti */ = {isa = PBXFileReference; lastKnownFileType = file; name = user.marti; path = marti/Model/VintageModelImporter/user.marti; sourceTree = SOURCE_ROOT; };
 		B5DEBB6B1B86583000D146EC /* ILstepAudioShort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILstepAudioShort.swift; path = marti.xcodeproj/../marti/Model/VintageModelImporter/ILstepAudioShort.swift; sourceTree = SOURCE_ROOT; };
 		B5DEBB6C1B86583000D146EC /* ILtasksListAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILtasksListAudio.swift; path = marti.xcodeproj/../marti/Model/VintageModelImporter/ILtasksListAudio.swift; sourceTree = SOURCE_ROOT; };
 		B5DEBB6D1B86583000D146EC /* ILtasksList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILtasksList.swift; path = marti.xcodeproj/../marti/Model/VintageModelImporter/ILtasksList.swift; sourceTree = SOURCE_ROOT; };
@@ -153,7 +153,6 @@
 		B59D9C541B84760600793BEF = {
 			isa = PBXGroup;
 			children = (
-				B511FB881B87A9C40003AEFC /* user.marti */,
 				B5A389C71B84C2ED00AF883F /* marti-Bridging-Header.h */,
 				B59D9C5F1B84760600793BEF /* marti */,
 				B59D9C781B84760700793BEF /* martiTests */,
@@ -228,6 +227,7 @@
 				B5DEBB8E1B86591B00D146EC /* VintageDataImporter.swift */,
 				B5DEBB631B8657E400D146EC /* marti.xcdatamodeld */,
 				B5DEBB661B8657E400D146EC /* marti1To2.xcmappingmodel */,
+				B5DEBB671B8657E400D146EC /* user.marti */,
 				B5DEBB281B86577100D146EC /* VintageModelObjects */,
 			);
 			name = VintageModelImporter;
@@ -237,29 +237,29 @@
 		B59D9CCC1B847BD900793BEF /* GeneratedManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				B511FB581B87A51F0003AEFC /* Schedule.swift */,
-				B511FB591B87A51F0003AEFC /* User.swift */,
-				B511FB5A1B87A51F0003AEFC /* DailyRecurrence.swift */,
-				B511FB5B1B87A51F0003AEFC /* RecursiveEvent.swift */,
-				B511FB5C1B87A51F0003AEFC /* WeeklyRecurrence.swift */,
-				B511FB5D1B87A51F0003AEFC /* ScheduledEvent.swift */,
-				B511FB5E1B87A51F0003AEFC /* EventTask.swift */,
-				B511FB5F1B87A51F0003AEFC /* RoutineTask.swift */,
-				B511FB601B87A51F0003AEFC /* Task.swift */,
-				B511FB611B87A51F0003AEFC /* Step.swift */,
-				B511FB621B87A51F0003AEFC /* Media.swift */,
-				B511FB631B87A51F0003AEFC /* Schedulable.swift */,
-				B511FB641B87A51F0003AEFC /* MonthlyRecurrence.swift */,
-				B511FB651B87A51F0003AEFC /* Context.swift */,
-				B511FB661B87A51F0003AEFC /* Routine.swift */,
-				B511FB671B87A51F0003AEFC /* SelectionStep.swift */,
-				B511FB681B87A51F0003AEFC /* EventRoutineTask.swift */,
-				B511FB691B87A51F0003AEFC /* EventRoutine.swift */,
-				B511FB6A1B87A51F0003AEFC /* Event.swift */,
-				B511FB6B1B87A51F0003AEFC /* StaticEvent.swift */,
-				B511FB6C1B87A51F0003AEFC /* MediaStep.swift */,
-				B511FB6D1B87A51F0003AEFC /* Calendar.swift */,
-				B511FB6E1B87A51F0003AEFC /* RoutingStep.swift */,
+				B51261AB1B8651EE008B0A74 /* Event.swift */,
+				B51261A91B8651EE008B0A74 /* WeeklyRecurrence.swift */,
+				B51261A71B8651EE008B0A74 /* User.swift */,
+				B51261A51B8651EE008B0A74 /* StaticEvent.swift */,
+				B51261A31B8651EE008B0A74 /* RoutingStep.swift */,
+				B51261A11B8651EE008B0A74 /* Context.swift */,
+				B512619F1B8651EE008B0A74 /* DailyRecurrence.swift */,
+				B512619D1B8651EE008B0A74 /* Schedule.swift */,
+				B512619B1B8651EE008B0A74 /* RecursiveEvent.swift */,
+				B51261991B8651EE008B0A74 /* Task.swift */,
+				B51261971B8651EE008B0A74 /* MediaStep.swift */,
+				B51261951B8651ED008B0A74 /* MonthlyRecurrence.swift */,
+				B51261931B8651ED008B0A74 /* ScheduledEvent.swift */,
+				B51261911B8651ED008B0A74 /* RoutineTask.swift */,
+				B512618F1B8651ED008B0A74 /* Routine.swift */,
+				B512618D1B8651ED008B0A74 /* EventRoutineTask.swift */,
+				B512618B1B8651ED008B0A74 /* EventRoutine.swift */,
+				B51261891B8651ED008B0A74 /* SelectionStep.swift */,
+				B51261871B8651ED008B0A74 /* Step.swift */,
+				B51261851B8651ED008B0A74 /* Calendar.swift */,
+				B51261831B8651ED008B0A74 /* Media.swift */,
+				B51261811B8651ED008B0A74 /* EventTask.swift */,
+				B512617F1B8651EC008B0A74 /* Schedulable.swift */,
 			);
 			name = GeneratedManagedObjects;
 			path = Model/GeneratedManagedObjects;
@@ -368,7 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B511FB8A1B87B59C0003AEFC /* user.marti in Resources */,
+				B5DEBB6A1B8657E400D146EC /* user.marti in Resources */,
 				B59D9C6B1B84760600793BEF /* Main.storyboard in Resources */,
 				B59D9C701B84760600793BEF /* LaunchScreen.xib in Resources */,
 				B59D9C6D1B84760600793BEF /* Images.xcassets in Resources */,
@@ -389,53 +389,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B511FB701B87A51F0003AEFC /* User.swift in Sources */,
-				B511FB811B87A51F0003AEFC /* Event.swift in Sources */,
-				B511FB851B87A51F0003AEFC /* RoutingStep.swift in Sources */,
+				B512618A1B8651ED008B0A74 /* SelectionStep.swift in Sources */,
 				B5DEBB841B86583000D146EC /* ILstepImage.swift in Sources */,
+				B51261881B8651ED008B0A74 /* Step.swift in Sources */,
 				B5DEBB871B86583000D146EC /* ILtaskImage.swift in Sources */,
 				B5DEBB7A1B86583000D146EC /* ILstepAudioShort.swift in Sources */,
-				B511FB771B87A51F0003AEFC /* Task.swift in Sources */,
-				B511FB7F1B87A51F0003AEFC /* EventRoutineTask.swift in Sources */,
-				B511FB7C1B87A51F0003AEFC /* Context.swift in Sources */,
+				B512619E1B8651EE008B0A74 /* Schedule.swift in Sources */,
 				B5DEBB691B8657E400D146EC /* marti1To2.xcmappingmodel in Sources */,
-				B511FB761B87A51F0003AEFC /* RoutineTask.swift in Sources */,
-				B511FB831B87A51F0003AEFC /* MediaStep.swift in Sources */,
-				B511FB801B87A51F0003AEFC /* EventRoutine.swift in Sources */,
-				B511FB7E1B87A51F0003AEFC /* SelectionStep.swift in Sources */,
 				B59D9C681B84760600793BEF /* BrowserViewController.swift in Sources */,
-				B511FB751B87A51F0003AEFC /* EventTask.swift in Sources */,
-				B511FB791B87A51F0003AEFC /* Media.swift in Sources */,
+				B51261A81B8651EE008B0A74 /* User.swift in Sources */,
+				B512618C1B8651ED008B0A74 /* EventRoutine.swift in Sources */,
+				B51261A61B8651EE008B0A74 /* StaticEvent.swift in Sources */,
+				B51261921B8651ED008B0A74 /* RoutineTask.swift in Sources */,
+				B51261901B8651ED008B0A74 /* Routine.swift in Sources */,
+				B51261A41B8651EE008B0A74 /* RoutingStep.swift in Sources */,
 				B5DEBB901B86591B00D146EC /* VintageDataImporter.swift in Sources */,
 				B5DEBB7E1B86583000D146EC /* ILtask.swift in Sources */,
 				B59D9C631B84760600793BEF /* AppDelegate.swift in Sources */,
-				B511FB7D1B87A51F0003AEFC /* Routine.swift in Sources */,
 				B59D9CCF1B847C8F00793BEF /* martiPro.xcdatamodeld in Sources */,
+				B51261981B8651EE008B0A74 /* MediaStep.swift in Sources */,
 				B5DEBB811B86583000D146EC /* ILstepThumbnail.swift in Sources */,
+				B51261841B8651ED008B0A74 /* Media.swift in Sources */,
 				B5DEBB851B86583000D146EC /* ILstepVideo.swift in Sources */,
 				B5DEBB7C1B86583000D146EC /* ILtasksList.swift in Sources */,
-				B511FB721B87A51F0003AEFC /* RecursiveEvent.swift in Sources */,
-				B511FB7B1B87A51F0003AEFC /* MonthlyRecurrence.swift in Sources */,
+				B512619A1B8651EE008B0A74 /* Task.swift in Sources */,
+				B51261801B8651EC008B0A74 /* Schedulable.swift in Sources */,
 				B59D9CFF1B847E5300793BEF /* User+Human.swift in Sources */,
-				B511FB6F1B87A51F0003AEFC /* Schedule.swift in Sources */,
-				B511FB781B87A51F0003AEFC /* Step.swift in Sources */,
 				B5DEBB7D1B86583000D146EC /* ILtaskAudioShort.swift in Sources */,
 				B5DEBB681B8657E400D146EC /* marti.xcdatamodeld in Sources */,
-				B511FB821B87A51F0003AEFC /* StaticEvent.swift in Sources */,
+				B51261AC1B8651EE008B0A74 /* Event.swift in Sources */,
+				B51261821B8651ED008B0A74 /* EventTask.swift in Sources */,
 				B5DEBB801B86583000D146EC /* ILstepAudio.swift in Sources */,
-				B511FB7A1B87A51F0003AEFC /* Schedulable.swift in Sources */,
+				B51261941B8651ED008B0A74 /* ScheduledEvent.swift in Sources */,
 				B5DEBB821B86583000D146EC /* ILgroup.swift in Sources */,
-				B511FB841B87A51F0003AEFC /* Calendar.swift in Sources */,
 				B5DEBB831B86583000D146EC /* ILtaskAudio.swift in Sources */,
-				B511FB731B87A51F0003AEFC /* WeeklyRecurrence.swift in Sources */,
+				B51261961B8651EE008B0A74 /* MonthlyRecurrence.swift in Sources */,
 				B5DEBB7F1B86583000D146EC /* ILstep.swift in Sources */,
 				B5DEBB881B86583000D146EC /* ILtaskThumbnail.swift in Sources */,
+				B51261A01B8651EE008B0A74 /* DailyRecurrence.swift in Sources */,
 				B5DEBB8C1B86590F00D146EC /* MartiCDManager.swift in Sources */,
 				B5DEBB7B1B86583000D146EC /* ILtasksListAudio.swift in Sources */,
+				B512618E1B8651ED008B0A74 /* EventRoutineTask.swift in Sources */,
+				B51261AA1B8651EE008B0A74 /* WeeklyRecurrence.swift in Sources */,
+				B51261A21B8651EE008B0A74 /* Context.swift in Sources */,
 				B5DEBB861B86583000D146EC /* ILtasksListThumbnail.swift in Sources */,
+				B51261861B8651ED008B0A74 /* Calendar.swift in Sources */,
+				B512619C1B8651EE008B0A74 /* RecursiveEvent.swift in Sources */,
 				B5DEBB8F1B86591B00D146EC /* VintageCDManager.swift in Sources */,
-				B511FB741B87A51F0003AEFC /* ScheduledEvent.swift in Sources */,
-				B511FB711B87A51F0003AEFC /* DailyRecurrence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
