@@ -30,7 +30,7 @@ class VintageDataImporter {
     
     func importVintageTaskList(vintageTaskList : ILtasksList) -> RoutingStep {
         let newRoutingStep = NSEntityDescription.insertNewObjectForEntityForName("RoutingStep", inManagedObjectContext: destinationMOC!) as! RoutingStep
-        newRoutingStep.name = vintageTaskList.tasksList_title
+        //newRoutingStep.name = vintageTaskList.tasksList_title
         
         for vintageTask in vintageTaskList.tasks {
             
@@ -73,6 +73,7 @@ class VintageDataImporter {
     
     func importVintageTask(vintageTask : ILtask) -> Task {
         let newTask = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: destinationMOC!) as! Task
+    
         newTask.name = vintageTask.task_title
         newTask.audioAssistant = vintageTask.task_audio.taskAudio_data
         newTask.index =  vintageTask.task_fakeIndex
@@ -106,12 +107,12 @@ class VintageDataImporter {
         for vintageTask in vintageTasks {
             if vintageTask.belongToTasksList.tasksList_type == "root" {
                 importVintageTask(vintageTask)
+                MartiCDManager.sharedInstance.saveContext()
             }
         }
         
         print("Username = \(user.name)")
-       
-        MartiCDManager.sharedInstance.saveContext()
+
     }
     
 

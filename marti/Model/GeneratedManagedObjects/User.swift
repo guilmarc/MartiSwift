@@ -1,14 +1,13 @@
 //
 //  User.swift
-//  marti
+//  
 //
-//  Created by Marco Guilmette on 2015-08-20.
-//  Copyright (c) 2015 Infologique. All rights reserved.
+//  Created by Marco Guilmette on 2015-08-21.
+//
 //
 
 import Foundation
 import CoreData
-
 
 class User: NSManagedObject {
 

@@ -20,6 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var error:NSError?
+        let pathToBundledDB = NSBundle.mainBundle().pathForResource("user", ofType: "marti")
+ 
+        NSFileManager.defaultManager().copyItemAtPath(pathToBundledDB!, toPath: pathToDocsFolder(), error: &error)
+        
+        print("SOURCE: \(pathToBundledDB!)\n\n")
+        
+        print("DEST: \(pathToDocsFolder())\n\n")
+       
+        
+        print("\(error?.description)")
+        
         let vintageDataImporter = VintageDataImporter()
         vintageDataImporter.importData()
 
@@ -27,6 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //vintageCDManager.printTask()
         
         return true
+    }
+    
+    func pathToDocsFolder() -> String {
+        let pathToDocumentsFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+
+        return pathToDocumentsFolder.stringByAppendingPathComponent("/user.marti")
     }
 
     func applicationWillResignActive(application: UIApplication) {
