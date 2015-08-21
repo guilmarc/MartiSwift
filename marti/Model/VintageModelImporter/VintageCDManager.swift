@@ -11,6 +11,12 @@ import CoreData
 
 class VintageCDManager {
     
+    static let sharedInstance = VintageCDManager()
+    
+    init() {
+        
+    }
+    
     func printTask() {
         let fetchRequest = NSFetchRequest(entityName: "ILtask")
         
@@ -55,7 +61,14 @@ class VintageCDManager {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("user.marti")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        
+        
+        var options = Dictionary<NSObject, AnyObject>()
+        options[NSMigratePersistentStoresAutomaticallyOption] = true
+        options[NSInferMappingModelAutomaticallyOption] = true
+        options["journal_mode"] = "DELETE"
+        
+        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options, error: &error) == nil {
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()

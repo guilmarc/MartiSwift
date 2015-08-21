@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //let vintageDataImporter: VintageDataImporter = VintageDataImporter()
-        //vintageDataImporter.importData()
+        let vintageDataImporter = VintageDataImporter()
+        vintageDataImporter.importData()
 
-        let vintageCDManager = VintageCDManager()
-        vintageCDManager.printTask()
+        //let vintageCDManager = VintageCDManager()
+        //vintageCDManager.printTask()
         
         return true
     }

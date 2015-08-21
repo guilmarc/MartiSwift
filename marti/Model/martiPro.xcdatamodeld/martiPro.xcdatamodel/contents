@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Calendar" representedClassName="Calendar" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Calendar" representedClassName="marti.Calendar" syncable="YES">
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Event" inverseName="calendar" inverseEntity="Event" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="calendar" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Context" representedClassName="Context" syncable="YES">
+    <entity name="Context" representedClassName="marti.Context" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="schedulables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Schedulable" inverseName="contexts" inverseEntity="Schedulable" syncable="YES"/>
     </entity>
-    <entity name="DailyRecurrence" representedClassName="DailyRecurrence" parentEntity="RecursiveEvent" syncable="YES">
+    <entity name="DailyRecurrence" representedClassName="marti.DailyRecurrence" parentEntity="RecursiveEvent" syncable="YES">
         <attribute name="recurrence" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="365" defaultValueString="1" syncable="YES"/>
     </entity>
-    <entity name="Event" representedClassName="Event" syncable="YES">
+    <entity name="Event" representedClassName="marti.Event" syncable="YES">
         <attribute name="done" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="executionDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -19,36 +19,36 @@
         <relationship name="calendar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Calendar" inverseName="events" inverseEntity="Calendar" syncable="YES"/>
         <relationship name="scheduledEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ScheduledEvent" inverseName="events" inverseEntity="ScheduledEvent" syncable="YES"/>
     </entity>
-    <entity name="EventRoutine" representedClassName="EventRoutine" parentEntity="Event" syncable="YES">
+    <entity name="EventRoutine" representedClassName="marti.EventRoutine" parentEntity="Event" syncable="YES">
         <relationship name="eventRoutineTasks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventRoutineTask" inverseName="eventRoutine" inverseEntity="EventRoutineTask" syncable="YES"/>
         <relationship name="routine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="eventRoutines" inverseEntity="Routine" syncable="YES"/>
     </entity>
-    <entity name="EventRoutineTask" representedClassName="EventRoutineTask" syncable="YES">
+    <entity name="EventRoutineTask" representedClassName="marti.EventRoutineTask" syncable="YES">
         <attribute name="done" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="eventRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventRoutine" inverseName="eventRoutineTasks" inverseEntity="EventRoutine" syncable="YES"/>
         <relationship name="routineTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoutineTask" inverseName="eventRoutineTasks" inverseEntity="RoutineTask" syncable="YES"/>
     </entity>
-    <entity name="EventTask" representedClassName="EventTask" parentEntity="Event" syncable="YES">
+    <entity name="EventTask" representedClassName="marti.EventTask" parentEntity="Event" syncable="YES">
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="eventTasks" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="Media" representedClassName="Media" syncable="YES">
+    <entity name="Media" representedClassName="marti.Media" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="type" attributeType="Integer 16" minValueString="0" maxValueString="5" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="MediaStep" representedClassName="MediaStep" parentEntity="Step" syncable="YES">
+    <entity name="MediaStep" representedClassName="marti.MediaStep" parentEntity="Step" syncable="YES">
         <attribute name="mediaType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="mediaAssistant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Media" syncable="YES"/>
     </entity>
-    <entity name="MonthlyRecurrence" representedClassName="MonthlyRecurrence" parentEntity="RecursiveEvent" syncable="YES">
+    <entity name="MonthlyRecurrence" representedClassName="marti.MonthlyRecurrence" parentEntity="RecursiveEvent" syncable="YES">
         <attribute name="recurrence" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="recurrenceMonthDay" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="31" defaultValueString="1" syncable="YES"/>
     </entity>
-    <entity name="RecursiveEvent" representedClassName="RecursiveEvent" parentEntity="ScheduledEvent" syncable="YES">
+    <entity name="RecursiveEvent" representedClassName="marti.RecursiveEvent" parentEntity="ScheduledEvent" syncable="YES">
         <attribute name="endAfterOccurence" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="Routine" representedClassName="Routine" parentEntity="Schedulable" syncable="YES">
+    <entity name="Routine" representedClassName="marti.Routine" parentEntity="Schedulable" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
         <attribute name="audioAssistant" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -60,26 +60,26 @@
         <relationship name="routineTasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RoutineTask" inverseName="routine" inverseEntity="RoutineTask" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="routines" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="RoutineTask" representedClassName="RoutineTask" syncable="YES">
+    <entity name="RoutineTask" representedClassName="marti.RoutineTask" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="eventRoutineTasks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventRoutineTask" inverseName="routineTask" inverseEntity="EventRoutineTask" syncable="YES"/>
         <relationship name="routine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="routineTasks" inverseEntity="Routine" syncable="YES"/>
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="routineTasks" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="RoutingStep" representedClassName="RoutingStep" parentEntity="Step" syncable="YES">
+    <entity name="RoutingStep" representedClassName="marti.RoutingStep" parentEntity="Step" syncable="YES">
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Task" inverseName="routingSteps" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="Schedulable" representedClassName="Schedulable" isAbstract="YES" syncable="YES">
+    <entity name="Schedulable" representedClassName="marti.Schedulable" isAbstract="YES" syncable="YES">
         <relationship name="contexts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Context" inverseName="schedulables" inverseEntity="Context" syncable="YES"/>
         <relationship name="sheduledEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScheduledEvent" inverseName="schedulable" inverseEntity="ScheduledEvent" syncable="YES"/>
     </entity>
-    <entity name="Schedule" representedClassName="Schedule" syncable="YES">
+    <entity name="Schedule" representedClassName="marti.Schedule" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="scheduledEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ScheduledEvent" inverseName="schedule" inverseEntity="ScheduledEvent" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="schedules" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="ScheduledEvent" representedClassName="ScheduledEvent" isAbstract="YES" syncable="YES">
+    <entity name="ScheduledEvent" representedClassName="marti.ScheduledEvent" isAbstract="YES" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="isExclusionEvent" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -88,11 +88,11 @@
         <relationship name="schedulable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Schedulable" inverseName="sheduledEvents" inverseEntity="Schedulable" syncable="YES"/>
         <relationship name="schedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Schedule" inverseName="scheduledEvents" inverseEntity="Schedule" syncable="YES"/>
     </entity>
-    <entity name="SelectionStep" representedClassName="SelectionStep" parentEntity="Step" syncable="YES">
+    <entity name="SelectionStep" representedClassName="marti.SelectionStep" parentEntity="Step" syncable="YES">
         <relationship name="mediaSteps" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MediaStep" syncable="YES"/>
     </entity>
-    <entity name="StaticEvent" representedClassName="StaticEvent" parentEntity="ScheduledEvent" syncable="YES"/>
-    <entity name="Step" representedClassName="Step" isAbstract="YES" syncable="YES">
+    <entity name="StaticEvent" representedClassName="marti.StaticEvent" parentEntity="ScheduledEvent" syncable="YES"/>
+    <entity name="Step" representedClassName="marti.Step" isAbstract="YES" syncable="YES">
         <attribute name="active" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
         <attribute name="audioAssistant" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -103,7 +103,7 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="task" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="steps" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="Task" representedClassName="Task" parentEntity="Schedulable" syncable="YES">
+    <entity name="Task" representedClassName="marti.Task" parentEntity="Schedulable" syncable="YES">
         <attribute name="active" attributeType="Boolean" defaultValueString="YES" indexed="YES" syncable="YES"/>
         <attribute name="audioAssistant" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -119,7 +119,7 @@
         <relationship name="steps" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Step" inverseName="task" inverseEntity="Step" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tasks" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES">
+    <entity name="User" representedClassName="marti.User" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="activeRootTasks" optional="YES" transient="YES" toMany="YES" deletionRule="Deny" ordered="YES" destinationEntity="Task" syncable="YES"/>
         <relationship name="calendar" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Calendar" inverseName="user" inverseEntity="Calendar" syncable="YES"/>
@@ -127,7 +127,7 @@
         <relationship name="schedules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Schedule" inverseName="user" inverseEntity="Schedule" syncable="YES"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Task" inverseName="user" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="WeeklyRecurrence" representedClassName="WeeklyRecurrence" parentEntity="RecursiveEvent" syncable="YES">
+    <entity name="WeeklyRecurrence" representedClassName="marti.WeeklyRecurrence" parentEntity="RecursiveEvent" syncable="YES">
         <attribute name="day0" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
         <attribute name="day1" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
         <attribute name="day2" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
@@ -139,28 +139,28 @@
     </entity>
     <fetchRequest name="FetchRequest" entity="Media"/>
     <elements>
-        <element name="Calendar" positionX="-756" positionY="72" width="128" height="73"/>
+        <element name="Calendar" positionX="-756" positionY="72" width="128" height="75"/>
         <element name="Context" positionX="106" positionY="-468" width="128" height="75"/>
         <element name="DailyRecurrence" positionX="-855" positionY="-150" width="128" height="60"/>
-        <element name="Event" positionX="-585" positionY="72" width="128" height="133"/>
-        <element name="EventRoutine" positionX="-495" positionY="227" width="128" height="73"/>
-        <element name="EventRoutineTask" positionX="-495" positionY="342" width="128" height="103"/>
-        <element name="EventTask" positionX="-675" positionY="227" width="128" height="58"/>
-        <element name="Media" positionX="-308" positionY="213" width="128" height="73"/>
-        <element name="MediaStep" positionX="187" positionY="189" width="128" height="73"/>
+        <element name="Event" positionX="-585" positionY="72" width="128" height="135"/>
+        <element name="EventRoutine" positionX="-495" positionY="227" width="128" height="75"/>
+        <element name="EventRoutineTask" positionX="-495" positionY="342" width="128" height="105"/>
+        <element name="EventTask" positionX="-675" positionY="227" width="128" height="60"/>
+        <element name="Media" positionX="-308" positionY="213" width="128" height="75"/>
+        <element name="MediaStep" positionX="187" positionY="189" width="128" height="75"/>
         <element name="MonthlyRecurrence" positionX="-459" positionY="-144" width="128" height="75"/>
-        <element name="RecursiveEvent" positionX="-506" positionY="-300" width="128" height="73"/>
-        <element name="Routine" positionX="36" positionY="-297" width="128" height="193"/>
-        <element name="RoutineTask" positionX="36" positionY="-94" width="128" height="118"/>
+        <element name="RecursiveEvent" positionX="-506" positionY="-300" width="128" height="75"/>
+        <element name="Routine" positionX="36" positionY="-297" width="128" height="195"/>
+        <element name="RoutineTask" positionX="36" positionY="-94" width="128" height="120"/>
         <element name="RoutingStep" positionX="36" positionY="180" width="128" height="60"/>
-        <element name="Schedulable" positionX="-110" positionY="-390" width="128" height="73"/>
-        <element name="Schedule" positionX="-533" positionY="-457" width="128" height="88"/>
-        <element name="ScheduledEvent" positionX="-353" positionY="-459" width="128" height="148"/>
+        <element name="Schedulable" positionX="-110" positionY="-390" width="128" height="75"/>
+        <element name="Schedule" positionX="-533" positionY="-457" width="128" height="90"/>
+        <element name="ScheduledEvent" positionX="-353" positionY="-459" width="128" height="150"/>
         <element name="SelectionStep" positionX="340" positionY="165" width="128" height="60"/>
-        <element name="StaticEvent" positionX="-315" positionY="-301" width="128" height="43"/>
-        <element name="Step" positionX="198" positionY="-90" width="128" height="178"/>
-        <element name="Task" positionX="-182" positionY="-63" width="128" height="253"/>
-        <element name="User" positionX="-729" positionY="-450" width="128" height="133"/>
-        <element name="WeeklyRecurrence" positionX="-621" positionY="-145" width="128" height="163"/>
+        <element name="StaticEvent" positionX="-315" positionY="-301" width="128" height="45"/>
+        <element name="Step" positionX="198" positionY="-90" width="128" height="180"/>
+        <element name="Task" positionX="-182" positionY="-63" width="128" height="255"/>
+        <element name="User" positionX="-729" positionY="-450" width="128" height="135"/>
+        <element name="WeeklyRecurrence" positionX="-621" positionY="-145" width="128" height="165"/>
     </elements>
 </model>

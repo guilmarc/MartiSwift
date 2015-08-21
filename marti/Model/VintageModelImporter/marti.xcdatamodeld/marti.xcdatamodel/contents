@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="ILgroup" representedClassName="ILgroup" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ILgroup" representedClassName="marti.ILgroup" syncable="YES">
         <attribute name="group_accessRights" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="group_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="group_fakeIndex" attributeType="Integer 64" defaultValueString="-1" syncable="YES"/>
@@ -13,7 +13,7 @@
         <attribute name="group_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
         <relationship name="tasksList" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="belongToGroup" inverseEntity="ILtasksList" syncable="YES"/>
     </entity>
-    <entity name="ILstep" representedClassName="ILstep" syncable="YES">
+    <entity name="ILstep" representedClassName="marti.ILstep" syncable="YES">
         <attribute name="step_contentStyle" attributeType="String" defaultValueString="ImageAndAudio" syncable="YES" preferredClientType="" preferredRecord="">
             <userInfo/>
         </attribute>
@@ -46,7 +46,7 @@
         </relationship>
         <relationship name="superStep" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="subStep" inverseEntity="ILstep" syncable="YES"/>
     </entity>
-    <entity name="ILstepAudio" representedClassName="ILstepAudio" syncable="YES">
+    <entity name="ILstepAudio" representedClassName="marti.ILstepAudio" syncable="YES">
         <attribute name="stepAudio_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
             <userInfo/>
         </attribute>
@@ -57,14 +57,14 @@
             <userInfo/>
         </relationship>
     </entity>
-    <entity name="ILstepAudioShort" representedClassName="ILstepAudioShort" syncable="YES">
+    <entity name="ILstepAudioShort" representedClassName="marti.ILstepAudioShort" syncable="YES">
         <attribute name="stepAudioShort_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="stepAudioShort_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stepAudioShort_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="stepAudioShort_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
         <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_audioShort" inverseEntity="ILstep" syncable="YES"/>
     </entity>
-    <entity name="ILstepImage" representedClassName="ILstepImage" syncable="YES">
+    <entity name="ILstepImage" representedClassName="marti.ILstepImage" syncable="YES">
         <attribute name="stepImage_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
             <userInfo/>
         </attribute>
@@ -75,14 +75,14 @@
             <userInfo/>
         </relationship>
     </entity>
-    <entity name="ILstepThumbnail" representedClassName="ILstepThumbnail" syncable="YES">
+    <entity name="ILstepThumbnail" representedClassName="marti.ILstepThumbnail" syncable="YES">
         <attribute name="stepThumbnail_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="stepThumbnail_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stepThumbnail_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="stepThumbnail_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
         <relationship name="belongToStep" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILstep" inverseName="step_thumbnail" inverseEntity="ILstep" syncable="YES"/>
     </entity>
-    <entity name="ILstepVideo" representedClassName="ILstepVideo" syncable="YES">
+    <entity name="ILstepVideo" representedClassName="marti.ILstepVideo" syncable="YES">
         <attribute name="stepVideo_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
             <userInfo/>
         </attribute>
@@ -93,7 +93,7 @@
             <userInfo/>
         </relationship>
     </entity>
-    <entity name="ILtask" representedClassName="ILtask" syncable="YES">
+    <entity name="ILtask" representedClassName="marti.ILtask" syncable="YES">
         <attribute name="task_accessRights" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="task_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="task_fakeIndex" attributeType="Integer 64" defaultValueString="-1" syncable="YES"/>
@@ -118,7 +118,7 @@
         </relationship>
         <relationship name="task_thumbnail" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ILtaskThumbnail" inverseName="belongToTask" inverseEntity="ILtaskThumbnail" syncable="YES"/>
     </entity>
-    <entity name="ILtaskAudio" representedClassName="ILtaskAudio" syncable="YES">
+    <entity name="ILtaskAudio" representedClassName="marti.ILtaskAudio" syncable="YES">
         <attribute name="taskAudio_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="taskAudio_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="taskAudio_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -127,14 +127,14 @@
             <userInfo/>
         </relationship>
     </entity>
-    <entity name="ILtaskAudioShort" representedClassName="ILtaskAudioShort" syncable="YES">
+    <entity name="ILtaskAudioShort" representedClassName="marti.ILtaskAudioShort" syncable="YES">
         <attribute name="taskAudioShort_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="taskAudioShort_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="taskAudioShort_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="taskAudioShort_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
         <relationship name="belongToTask" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtask" inverseName="task_audioShort" inverseEntity="ILtask" syncable="YES"/>
     </entity>
-    <entity name="ILtaskImage" representedClassName="ILtaskImage" syncable="YES">
+    <entity name="ILtaskImage" representedClassName="marti.ILtaskImage" syncable="YES">
         <attribute name="taskImage_data" optional="YES" attributeType="Binary" syncable="YES" preferredClientType="" preferredRecord="">
             <userInfo/>
         </attribute>
@@ -145,7 +145,7 @@
             <userInfo/>
         </relationship>
     </entity>
-    <entity name="ILtasksList" representedClassName="ILtasksList" syncable="YES">
+    <entity name="ILtasksList" representedClassName="marti.ILtasksList" syncable="YES">
         <attribute name="tasksList_accessRights" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tasksList_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tasksList_groupName" optional="YES" attributeType="String" syncable="YES"/>
@@ -166,21 +166,21 @@
         <relationship name="tasksList_audio" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtasksListAudio" inverseName="belongToTasksList" inverseEntity="ILtasksListAudio" syncable="YES"/>
         <relationship name="tasksList_thumbnail" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ILtasksListThumbnail" inverseName="belongToTasksList" inverseEntity="ILtasksListThumbnail" syncable="YES"/>
     </entity>
-    <entity name="ILtasksListAudio" representedClassName="ILtasksListAudio" syncable="YES">
+    <entity name="ILtasksListAudio" representedClassName="marti.ILtasksListAudio" syncable="YES">
         <attribute name="tasksListAudio_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="tasksListAudio_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tasksListAudio_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="tasksListAudio_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
         <relationship name="belongToTasksList" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="tasksList_audio" inverseEntity="ILtasksList" syncable="YES"/>
     </entity>
-    <entity name="ILtasksListThumbnail" representedClassName="ILtasksListThumbnail" syncable="YES">
+    <entity name="ILtasksListThumbnail" representedClassName="marti.ILtasksListThumbnail" syncable="YES">
         <attribute name="tasksListThumbnail_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="tasksListThumbnail_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tasksListThumbnail_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="tasksListThumbnail_version" attributeType="Float" defaultValueString="1.02" syncable="YES"/>
         <relationship name="belongToTasksList" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ILtasksList" inverseName="tasksList_thumbnail" inverseEntity="ILtasksList" syncable="YES"/>
     </entity>
-    <entity name="ILtaskThumbnail" representedClassName="ILtaskThumbnail" syncable="YES">
+    <entity name="ILtaskThumbnail" representedClassName="marti.ILtaskThumbnail" syncable="YES">
         <attribute name="taskThumbnail_data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="taskThumbnail_flags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="taskThumbnail_modifiedDate" optional="YES" attributeType="Date" syncable="YES"/>

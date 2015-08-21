@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "marti/Model/VintageModelImporter/VintageCDManager.swift"
-            timestampString = "461790745.804041"
+            filePath = "marti/Model/VintageModelImporter/VintageDataImporter.swift"
+            timestampString = "461869712.995555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "printTask()"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "importData()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

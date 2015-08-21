@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B511FB291B876D570003AEFC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B511FB271B876D570003AEFC /* Model.xcdatamodeld */; };
 		B51261801B8651EC008B0A74 /* Schedulable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512617F1B8651EC008B0A74 /* Schedulable.swift */; };
 		B51261821B8651ED008B0A74 /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261811B8651ED008B0A74 /* EventTask.swift */; };
 		B51261841B8651ED008B0A74 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51261831B8651ED008B0A74 /* Media.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B511FB281B876D570003AEFC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B512617F1B8651EC008B0A74 /* Schedulable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedulable.swift; sourceTree = "<group>"; };
 		B51261811B8651ED008B0A74 /* EventTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
 		B51261831B8651ED008B0A74 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				B5DEBB8B1B86590F00D146EC /* MartiCDManager.swift */,
 				B59D9CCD1B847C8F00793BEF /* martiPro.xcdatamodeld */,
+				B511FB271B876D570003AEFC /* Model.xcdatamodeld */,
 				B59D9CFE1B847E5300793BEF /* User+Human.swift */,
 				B59D9CCC1B847BD900793BEF /* GeneratedManagedObjects */,
 				B59D9C891B847BBA00793BEF /* VintageModelImporter */,
@@ -400,6 +403,7 @@
 				B51261A81B8651EE008B0A74 /* User.swift in Sources */,
 				B512618C1B8651ED008B0A74 /* EventRoutine.swift in Sources */,
 				B51261A61B8651EE008B0A74 /* StaticEvent.swift in Sources */,
+				B511FB291B876D570003AEFC /* Model.xcdatamodeld in Sources */,
 				B51261921B8651ED008B0A74 /* RoutineTask.swift in Sources */,
 				B51261901B8651ED008B0A74 /* Routine.swift in Sources */,
 				B51261A41B8651EE008B0A74 /* RoutingStep.swift in Sources */,
@@ -648,6 +652,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		B511FB271B876D570003AEFC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B511FB281B876D570003AEFC /* Model.xcdatamodel */,
+			);
+			currentVersion = B511FB281B876D570003AEFC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		B59D9CCD1B847C8F00793BEF /* martiPro.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
