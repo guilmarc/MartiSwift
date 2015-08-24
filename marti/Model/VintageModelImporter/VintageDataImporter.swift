@@ -30,12 +30,19 @@ class VintageDataImporter {
     
     func importVintageTaskList(vintageTaskList : ILtasksList) -> RoutingStep {
         let newRoutingStep = NSEntityDescription.insertNewObjectForEntityForName("RoutingStep", inManagedObjectContext: destinationMOC!) as! RoutingStep
-        newRoutingStep.name = vintageTaskList.tasksList_title
+        
+        if let name = vintageTaskList.tasksList_title { newRoutingStep.name = name }
+        //newRoutingStep.name = vintageTaskList.tasksList_title
         
         for vintageTask in vintageTaskList.tasks {
             
             let newTask = importVintageTask(vintageTask as! ILtask)
+            
             //[newTask addRoutingStepsObject:newRoutingStep];
+            var mutableItems = newRoutingStep.tasks.mutableCopy() as! NSMutableOrderedSet
+            mutableItems.addObject(newTask)
+            newRoutingStep.tasks = mutableItems.copy() as! NSOrderedSet
+            
             newTask.isRoot = true
         }
         
@@ -51,11 +58,14 @@ class VintageDataImporter {
         return newMedia
     }
 
-    func importVintageSimpleStep(vintageStep: ILstep){
+    func importVintageSimpleStep(vintageStep: ILstep) -> MediaStep{
         //Create a new MediaStep entity in new model
         let newMediaStep = NSEntityDescription.insertNewObjectForEntityForName("MediaStep", inManagedObjectContext: destinationMOC!) as! MediaStep
-        newMediaStep.name = vintageStep.step_title
-        newMediaStep.textualAssistant = vintageStep.step_description
+        
+        //Thoses value can be nil so we unwrap the optional
+        if let name = vintageStep.step_title {newMediaStep.name = name}
+        if let description = vintageStep.step_description { newMediaStep.textualAssistant = description }
+
         newMediaStep.thumbnail = vintageStep.step_thumbnail.stepThumbnail_data
         
         if vintageStep.step_contentStyle == "imageAndAudio" {
@@ -69,11 +79,12 @@ class VintageDataImporter {
             newMediaStep.mediaAssistant = importMediaData(vintageStep.step_video.stepVideo_data, mediaType: .MediaTypeVideo)
         }
         
+        return newMediaStep
     }
     
     func importVintageTask(vintageTask : ILtask) -> Task {
         let newTask = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: destinationMOC!) as! Task
-        newTask.name = vintageTask.task_title
+        if let name = vintageTask.task_title { newTask.name = name }
         newTask.audioAssistant = vintageTask.task_audio.taskAudio_data
         newTask.index =  vintageTask.task_fakeIndex
         newTask.mediaAssistant.data =  vintageTask.task_image.taskImage_data
@@ -86,9 +97,10 @@ class VintageDataImporter {
             var vintageStep = vintageTask.steps[index] as! ILstep
             
             if vintageStep.step_style == "simpleStep" {
-                //importVintageSimpleStep(vintageStep)
+                //TODO: Plante quand un attribut est vide (nil).
+                importVintageSimpleStep(vintageStep).task = newTask
             } else {
-                importVintageTaskList(vintageStep.subTasks)
+                importVintageTaskList(vintageStep.subTasks).task = newTask
             }
         }
         return newTask
@@ -109,7 +121,7 @@ class VintageDataImporter {
             }
         }
         
-        print("Username = \(user.name)")
+        //print("Username = \(user.name)")
        
         MartiCDManager.sharedInstance.saveContext()
     }

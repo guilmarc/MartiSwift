@@ -12,11 +12,11 @@ import CoreData
 class ILstep: NSManagedObject {
 
     @NSManaged var step_contentStyle: String
-    @NSManaged var step_description: String
+    @NSManaged var step_description: String?
     @NSManaged var step_flags: String
     @NSManaged var step_modifiedDate: NSDate
     @NSManaged var step_style: String
-    @NSManaged var step_title: String
+    @NSManaged var step_title: String?
     @NSManaged var step_useState: String
     @NSManaged var step_version: NSNumber
     @NSManaged var belongToTask: ILtask

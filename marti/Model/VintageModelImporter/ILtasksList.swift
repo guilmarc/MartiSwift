@@ -15,7 +15,7 @@ class ILtasksList: NSManagedObject {
     @NSManaged var tasksList_flags: String
     @NSManaged var tasksList_groupName: String
     @NSManaged var tasksList_modifiedDate: NSDate
-    @NSManaged var tasksList_title: String
+    @NSManaged var tasksList_title: String?
     @NSManaged var tasksList_type: String
     @NSManaged var tasksList_useState: String
     @NSManaged var tasksList_version: NSNumber

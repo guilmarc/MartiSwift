@@ -12,12 +12,12 @@ import CoreData
 class ILtask: NSManagedObject {
 
     @NSManaged var task_accessRights: String
-    @NSManaged var task_description: String
+    @NSManaged var task_description: String?
     @NSManaged var task_fakeIndex: NSNumber
     @NSManaged var task_flags: String
     @NSManaged var task_language: String
     @NSManaged var task_modifiedDate: NSDate
-    @NSManaged var task_title: String
+    @NSManaged var task_title: String?
     @NSManaged var task_useState: String
     @NSManaged var task_version: NSNumber
     @NSManaged var belongToTasksList: ILtasksList
