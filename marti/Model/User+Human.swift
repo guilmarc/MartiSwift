@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+extension User {
+    
+    func test(){
+        
+    }
+}

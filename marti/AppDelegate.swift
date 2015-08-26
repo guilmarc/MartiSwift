@@ -20,16 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        print("\n\n\(applicationDocumentsDirectory.absoluteString!)\n\n")
+        //print("\n\n\(applicationDocumentsDirectory.absoluteString!)\n\n")
         
         
         let vintageDataImporter = VintageDataImporter()
         vintageDataImporter.importData()
 
-        
+        print("\(MartiCDManager.sharedInstance.defaultGroup.name)")
         
         //let vintageCDManager = VintageCDManager()
         //vintageCDManager.printTask()
+        
+        
+        for task in MartiCDManager.sharedInstance.currentUser.tasks {
+            let thisTask : Task = task as! Task
+            print("Task: \(thisTask.name) with \(thisTask.steps.count) steps\n")
+        }
         
         return true
     }

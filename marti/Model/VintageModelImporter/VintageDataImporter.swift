@@ -25,7 +25,7 @@ class VintageDataImporter {
     }
     
     func clearMOC(){
-        //MartiCDManager.sharedInstance.
+
     }
     
     func importVintageTaskList(vintageTaskList : ILtasksList) -> RoutingStep {
@@ -91,7 +91,9 @@ class VintageDataImporter {
         //newTask vintageTask.task_language;
         newTask.thumbnail = vintageTask.task_thumbnail.taskThumbnail_data
         newTask.user = MartiCDManager.sharedInstance.currentUser
-
+        
+        newTask.addToGroup(MartiCDManager.sharedInstance.defaultGroup)
+        
         //TODO: Find out why we are unable to set to a for in loop
         for var index = 0; index < vintageTask.steps.count; index++ {
             var vintageStep = vintageTask.steps[index] as! ILstep
@@ -109,7 +111,9 @@ class VintageDataImporter {
     func importData(){
         clearMOC()
         
+        //Create the first user
         var user = MartiCDManager.sharedInstance.currentUser
+        
         
         let fetchRequest = NSFetchRequest(entityName: "ILtask")
         let vintageTasks : [ILtask] = sourceMOC?.executeFetchRequest(fetchRequest, error: nil) as! [ILtask]

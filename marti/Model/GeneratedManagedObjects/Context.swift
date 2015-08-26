@@ -2,7 +2,7 @@
 //  Context.swift
 //  marti
 //
-//  Created by Marco Guilmette on 2015-08-20.
+//  Created by Marco Guilmette on 2015-08-26.
 //  Copyright (c) 2015 Infologique. All rights reserved.
 //
 
@@ -12,6 +12,6 @@ import CoreData
 class Context: NSManagedObject {
 
     @NSManaged var name: String
-    @NSManaged var schedulables: NSSet
+    @NSManaged var schedulables: NSOrderedSet
 
 }

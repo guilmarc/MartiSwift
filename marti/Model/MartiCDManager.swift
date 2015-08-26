@@ -17,30 +17,37 @@ class MartiCDManager {
         
     }
 
-    var _currentUser: User? = nil;
-
-    var currentUser: User {
-        get{
-            //If the variable is already set, return the current user stored in cache
-            if (_currentUser != nil) {
-                return _currentUser!
-            }
-            
-            var error: NSError? = nil
-            let request = NSFetchRequest(entityName: "User")
-            let Users : [User] = (self.managedObjectContext?.executeFetchRequest(request, error: &error) as? [User])!
-            
-            if Users.count > 0 {
-                _currentUser = Users.first
-            } else {
-                _currentUser = (NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: managedObjectContext!) as! User)
-                _currentUser!.name = "Default"
-                
-                saveContext()
-            }
-            return _currentUser!
+    //Lazy load the first user or create one if not existing
+    lazy var currentUser: User = {
+        var error: NSError? = nil
+        let request = NSFetchRequest(entityName: "User")
+        let Users = self.managedObjectContext?.executeFetchRequest(request, error: &error) as! [User]
+        
+        if Users.count > 0 {
+            return Users.first!
+        } else {
+            let newUser : User = (NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as! User)
+            newUser.name = "Default"
+            self.saveContext()
+            return newUser
         }
-    }
+    }()
+    
+    //Load the first group (defautl group) or create it if not existing
+    lazy var defaultGroup: Group = {
+        var error: NSError? = nil
+        let request = NSFetchRequest(entityName: "Group")
+        let groups = self.managedObjectContext?.executeFetchRequest(request, error: &error) as! [Group]
+        
+        if groups.count > 0 {
+            return groups.first!
+        } else {
+            let newGroup = (NSEntityDescription.insertNewObjectForEntityForName("Group", inManagedObjectContext: self.managedObjectContext!) as! Group)
+            newGroup.name = "Général"
+            self.saveContext()
+            return newGroup
+        }
+    }()
 
     
     // MARK: - Core Data stack

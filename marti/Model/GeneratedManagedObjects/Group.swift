@@ -1,5 +1,5 @@
 //
-//  EventRoutine.swift
+//  Group.swift
 //  marti
 //
 //  Created by Marco Guilmette on 2015-08-26.
@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 
-class EventRoutine: Event {
+class Group: NSManagedObject {
 
-    @NSManaged var eventRoutineTasks: NSOrderedSet
-    @NSManaged var routine: Routine
+    @NSManaged var name: String
+    @NSManaged var schedulables: NSOrderedSet
 
 }

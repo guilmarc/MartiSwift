@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BrowserViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class BrowserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
