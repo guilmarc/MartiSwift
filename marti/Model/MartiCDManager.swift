@@ -48,10 +48,17 @@ class MartiCDManager {
             return newGroup
         }
     }()
+    
+    // MARK: - FetchedResultControllers
+    lazy var taskFetchedResultController: NSFetchedResultsController = {
+        let fetchRequest = NSFetchRequest(entityName: "task")
+        let sortDescriptor = NSSortDescriptor(key: "index", ascending: true)
+        fetchRequest.sortDescriptors?.append(sortDescriptor)
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: "group.name", cacheName: nil)
+    }()
 
     
     // MARK: - Core Data stack
-    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.infologique.HitList" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)

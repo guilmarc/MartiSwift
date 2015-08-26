@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vintageDataImporter = VintageDataImporter()
         vintageDataImporter.importData()
 
-        print("\(MartiCDManager.sharedInstance.defaultGroup.name)")
+        print("\(MartiCDManager.sharedInstance.defaultGroup.name)\n")
         
         //let vintageCDManager = VintageCDManager()
         //vintageCDManager.printTask()

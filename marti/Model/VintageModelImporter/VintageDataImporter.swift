@@ -92,6 +92,7 @@ class VintageDataImporter {
         newTask.thumbnail = vintageTask.task_thumbnail.taskThumbnail_data
         newTask.user = MartiCDManager.sharedInstance.currentUser
         
+        //
         newTask.addToGroup(MartiCDManager.sharedInstance.defaultGroup)
         
         //TODO: Find out why we are unable to set to a for in loop
