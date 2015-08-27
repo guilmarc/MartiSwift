@@ -36,14 +36,14 @@ class VintageDataImporter {
         
         for vintageTask in vintageTaskList.tasks {
             
-            let newTask = importVintageTask(vintageTask as! ILtask)
+            let newTask = importVintageTask(vintageTask as! ILtask, isRoot : false)
             
             //[newTask addRoutingStepsObject:newRoutingStep];
             var mutableItems = newRoutingStep.tasks.mutableCopy() as! NSMutableOrderedSet
             mutableItems.addObject(newTask)
             newRoutingStep.tasks = mutableItems.copy() as! NSOrderedSet
             
-            newTask.isRoot = true
+            //newTask.isRoot = true
         }
         
         return newRoutingStep
@@ -82,7 +82,7 @@ class VintageDataImporter {
         return newMediaStep
     }
     
-    func importVintageTask(vintageTask : ILtask) -> Task {
+    func importVintageTask(vintageTask : ILtask, isRoot : Bool) -> Task {
         let newTask = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: destinationMOC!) as! Task
         if let name = vintageTask.task_title { newTask.name = name }
         newTask.audioAssistant = vintageTask.task_audio.taskAudio_data
@@ -91,7 +91,7 @@ class VintageDataImporter {
         //newTask vintageTask.task_language;
         newTask.thumbnail = vintageTask.task_thumbnail.taskThumbnail_data
         newTask.user = MartiCDManager.sharedInstance.currentUser
-        
+        newTask.isRoot = isRoot
         //
         newTask.addToGroup(MartiCDManager.sharedInstance.defaultGroup)
         
@@ -122,7 +122,7 @@ class VintageDataImporter {
         //let vintageTask : ILtask
         for vintageTask in vintageTasks {
             if vintageTask.belongToTasksList.tasksList_type == "root" {
-                importVintageTask(vintageTask)
+                importVintageTask(vintageTask, isRoot: true)
             }
         }
         

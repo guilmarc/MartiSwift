@@ -32,10 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //vintageCDManager.printTask()
         
         
-        for task in MartiCDManager.sharedInstance.currentUser.tasks {
+        /*for task in MartiCDManager.sharedInstance.currentUser.tasks {
             let thisTask : Task = task as! Task
             print("Task: \(thisTask.name) with \(thisTask.steps.count) steps\n")
-        }
+        }*/
+        
+        MartiCDManager.sharedInstance.testRootTaskFRC()
         
         return true
     }

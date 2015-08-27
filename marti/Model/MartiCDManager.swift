@@ -16,6 +16,17 @@ class MartiCDManager {
     init() {
         
     }
+    
+    func testRootTaskFRC(){
+       
+        var e: NSError?
+        if !rootTaskFetchedResultController.performFetch(&e) {
+            println("fetch error: \(e!.localizedDescription)")
+            abort();
+        }
+        
+        print("\(rootTaskFetchedResultController.fetchedObjects?.count)\n\n")
+    }
 
     //Lazy load the first user or create one if not existing
     lazy var currentUser: User = {
@@ -26,14 +37,14 @@ class MartiCDManager {
         if Users.count > 0 {
             return Users.first!
         } else {
-            let newUser : User = (NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as! User)
+            let newUser = (NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.managedObjectContext!) as! User)
             newUser.name = "Default"
             self.saveContext()
             return newUser
         }
     }()
     
-    //Load the first group (defautl group) or create it if not existing
+    //Load the first group (default group) or create it if not existing
     lazy var defaultGroup: Group = {
         var error: NSError? = nil
         let request = NSFetchRequest(entityName: "Group")
@@ -50,11 +61,13 @@ class MartiCDManager {
     }()
     
     // MARK: - FetchedResultControllers
-    lazy var taskFetchedResultController: NSFetchedResultsController = {
-        let fetchRequest = NSFetchRequest(entityName: "task")
+    lazy var rootTaskFetchedResultController: NSFetchedResultsController = {
+        let fetchRequest = NSFetchRequest(entityName: "Task")
         let sortDescriptor = NSSortDescriptor(key: "index", ascending: true)
-        fetchRequest.sortDescriptors?.append(sortDescriptor)
-        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: "group.name", cacheName: nil)
+        let predicate = NSPredicate(format: "isRoot == %@", true)
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = [sortDescriptor] //Array of sort descriptor
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
     }()
 
     

@@ -41,6 +41,7 @@
 		B5D1E0F11B8DF589004C4DFD /* RoutineTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1E0F01B8DF589004C4DFD /* RoutineTask.swift */; };
 		B5D1E0F31B8DF589004C4DFD /* RoutingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1E0F21B8DF589004C4DFD /* RoutingStep.swift */; };
 		B5D1E0F51B8DF589004C4DFD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1E0F41B8DF589004C4DFD /* Event.swift */; };
+		B5D1E0F71B8FA91F004C4DFD /* RootTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1E0F61B8FA91F004C4DFD /* RootTaskViewController.swift */; };
 		B5DEBB681B8657E400D146EC /* marti.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB631B8657E400D146EC /* marti.xcdatamodeld */; };
 		B5DEBB691B8657E400D146EC /* marti1To2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5DEBB661B8657E400D146EC /* marti1To2.xcmappingmodel */; };
 		B5DEBB6A1B8657E400D146EC /* user.marti in Resources */ = {isa = PBXBuildFile; fileRef = B5DEBB671B8657E400D146EC /* user.marti */; };
@@ -114,6 +115,7 @@
 		B5D1E0F01B8DF589004C4DFD /* RoutineTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTask.swift; sourceTree = "<group>"; };
 		B5D1E0F21B8DF589004C4DFD /* RoutingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingStep.swift; sourceTree = "<group>"; };
 		B5D1E0F41B8DF589004C4DFD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B5D1E0F61B8FA91F004C4DFD /* RootTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTaskViewController.swift; sourceTree = "<group>"; };
 		B5DEBB641B8657E400D146EC /* marti.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marti.xcdatamodel; sourceTree = "<group>"; };
 		B5DEBB651B8657E400D146EC /* marti2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marti2.xcdatamodel; sourceTree = "<group>"; };
 		B5DEBB661B8657E400D146EC /* marti1To2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; name = marti1To2.xcmappingmodel; path = marti/Model/VintageModelImporter/marti1To2.xcmappingmodel; sourceTree = SOURCE_ROOT; };
@@ -180,6 +182,7 @@
 			children = (
 				B59D9C621B84760600793BEF /* AppDelegate.swift */,
 				B59D9C671B84760600793BEF /* BrowserViewController.swift */,
+				B5D1E0F61B8FA91F004C4DFD /* RootTaskViewController.swift */,
 				B59D9C691B84760600793BEF /* Main.storyboard */,
 				B59D9C6C1B84760600793BEF /* Images.xcassets */,
 				B59D9C6E1B84760600793BEF /* LaunchScreen.xib */,
@@ -444,6 +447,7 @@
 				B5D1E0D91B8DF589004C4DFD /* Context.swift in Sources */,
 				B5DEBB861B86583000D146EC /* ILtasksListThumbnail.swift in Sources */,
 				B5D1E0E31B8DF589004C4DFD /* RecursiveEvent.swift in Sources */,
+				B5D1E0F71B8FA91F004C4DFD /* RootTaskViewController.swift in Sources */,
 				B5D1E0EB1B8DF589004C4DFD /* EventTask.swift in Sources */,
 				B5D1E0E51B8DF589004C4DFD /* Task.swift in Sources */,
 				B5DEBB8F1B86591B00D146EC /* VintageCDManager.swift in Sources */,
