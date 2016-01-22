@@ -17,9 +17,10 @@ class RootTaskViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var error: NSError? = nil
-        if (fetchedResultsController.performFetch(&error) == false) {
-            print("An error occurred: \(error?.localizedDescription)")
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print("An error occurred")
         }
     }
     
@@ -40,7 +41,7 @@ class RootTaskViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController.sections {
-            let currentSection = sections[section] as! NSFetchedResultsSectionInfo
+            let currentSection = sections[section] 
             return currentSection.numberOfObjects
         }
         
@@ -48,7 +49,7 @@ class RootTaskViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RootTaskCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RootTaskCell", forIndexPath: indexPath) 
         let task = fetchedResultsController.objectAtIndexPath(indexPath) as! Task
         
         cell.textLabel?.text = task.name
@@ -59,7 +60,7 @@ class RootTaskViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let sections = fetchedResultsController.sections {
-            let currentSection = sections[section] as! NSFetchedResultsSectionInfo
+            let currentSection = sections[section] 
             return currentSection.name
         }
         

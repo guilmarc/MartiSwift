@@ -39,7 +39,7 @@ class VintageDataImporter {
             let newTask = importVintageTask(vintageTask as! ILtask, isRoot : false)
             
             //[newTask addRoutingStepsObject:newRoutingStep];
-            var mutableItems = newRoutingStep.tasks.mutableCopy() as! NSMutableOrderedSet
+            let mutableItems = newRoutingStep.tasks.mutableCopy() as! NSMutableOrderedSet
             mutableItems.addObject(newTask)
             newRoutingStep.tasks = mutableItems.copy() as! NSOrderedSet
             
@@ -97,7 +97,7 @@ class VintageDataImporter {
         
         //TODO: Find out why we are unable to set to a for in loop
         for var index = 0; index < vintageTask.steps.count; index++ {
-            var vintageStep = vintageTask.steps[index] as! ILstep
+            let vintageStep = vintageTask.steps[index] as! ILstep
             
             if vintageStep.step_style == "simpleStep" {
                 //TODO: Plante quand un attribut est vide (nil).
@@ -117,7 +117,7 @@ class VintageDataImporter {
         
         
         let fetchRequest = NSFetchRequest(entityName: "ILtask")
-        let vintageTasks : [ILtask] = sourceMOC?.executeFetchRequest(fetchRequest, error: nil) as! [ILtask]
+        let vintageTasks : [ILtask] = (try! sourceMOC?.executeFetchRequest(fetchRequest)) as! [ILtask]
 
         //let vintageTask : ILtask
         for vintageTask in vintageTasks {

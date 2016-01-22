@@ -20,19 +20,22 @@ class MartiCDManager {
     func testRootTaskFRC(){
        
         var e: NSError?
-        if !rootTaskFetchedResultController.performFetch(&e) {
-            println("fetch error: \(e!.localizedDescription)")
+        do {
+            try rootTaskFetchedResultController.performFetch()
+        } catch let error as NSError {
+            e = error
+            print("fetch error: \(e!.localizedDescription)")
             abort();
         }
         
-        print("\(rootTaskFetchedResultController.fetchedObjects?.count)\n\n")
+        print("\(rootTaskFetchedResultController.fetchedObjects?.count)\n\n", terminator: "")
     }
 
     //Lazy load the first user or create one if not existing
     lazy var currentUser: User = {
         var error: NSError? = nil
         let request = NSFetchRequest(entityName: "User")
-        let Users = self.managedObjectContext?.executeFetchRequest(request, error: &error) as! [User]
+        let Users = (try! self.managedObjectContext?.executeFetchRequest(request)) as! [User]
         
         if Users.count > 0 {
             return Users.first!
@@ -48,7 +51,7 @@ class MartiCDManager {
     lazy var defaultGroup: Group = {
         var error: NSError? = nil
         let request = NSFetchRequest(entityName: "Group")
-        let groups = self.managedObjectContext?.executeFetchRequest(request, error: &error) as! [Group]
+        let groups = (try! self.managedObjectContext?.executeFetchRequest(request)) as! [Group]
         
         if groups.count > 0 {
             return groups.first!
@@ -75,7 +78,7 @@ class MartiCDManager {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.infologique.HitList" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as! NSURL
+        return urls[urls.count-1] 
         }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -91,7 +94,10 @@ class MartiCDManager {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("marti.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -103,6 +109,8 @@ class MartiCDManager {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -124,11 +132,16 @@ class MartiCDManager {
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }
